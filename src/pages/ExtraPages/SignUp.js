@@ -9,7 +9,7 @@ import signUpImage from "../../assets/images/auth/sign-up.png";
 import { Form } from "react-bootstrap";
 
 const SignUp = () => {
-  document.title = "Sign Up | Jobcy - Job Listing Template | Themesdesign";
+  document.title = "Sign Up | Next-Gen - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <div>
@@ -51,7 +51,7 @@ const SignUp = () => {
                                 <h5>Let's Get Started</h5>
                                 <p className="text-white-70">
                                   Sign Up and get access to all the features of
-                                  Jobcy
+                                  Next-Gen
                                 </p>
                               </div>
                               <Form action="/" className="auth-form">

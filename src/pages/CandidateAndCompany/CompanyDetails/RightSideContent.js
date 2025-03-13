@@ -38,98 +38,98 @@ const RightSideContent = () => {
   const [photoIndex, setphotoIndex] = useState(0);
   const [isGallery, setisGallery] = useState(false);
 
-  const jobVacancyPost = [
-    {
-      id: 1,
-      companyImg: jobImage1,
-      jobDescription: "HTML Developer",
-      experience: "0-2 Yrs Exp.",
-      companyName: "Jobcy Technology Pvt.Ltd",
-      location: "California",
-      salary: "$250 - $800 / month",
-      fullTime: true,
-      timing: "Full Time",
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: "bg-warning-subtle text-warning",
-          badgeName: "Urgent"
-        },
-        {
-          id: 2,
-          badgeclassName: "bg-info-subtle text-info",
-          badgeName: "Private"
-        }
-      ]
-    },
-    {
-      id: 2,
-      companyImg: jobImage2,
-      jobDescription: "Marketing Director",
-      experience: "2-4 Yrs Exp.",
-      companyName: "Creative Agency",
-      location: "New York",
-      salary: "$250 - $800 / month",
-      partTime: true,
-      timing: "Full Time",
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: "bg-info-subtle text-info",
-          badgeName: "Private"
-        }
-      ]
-    },
-    {
-      id: 3,
-      companyImg: jobImage3,
-      jobDescription: "HTML Developer",
-      experience: "2-4 Yrs Exp.",
-      companyName: "Jobcy Technology Pvt.Ltd",
-      location: "California",
-      salary: "$250 - $800 / month",
-      freeLance: true,
-      timing: "Freelance",
-      addclassNameBookmark: true,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: "bg-blue-subtle text-blue",
-          badgeName: "Internship"
-        }
-      ]
-    },
-    {
-      id: 4,
-      companyImg: jobImage4,
-      jobDescription: "Java Developer",
-      experience: "0-2 Yrs Exp.",
-      companyName: "Jobcy Technology Pvt.Ltd",
-      location: "California",
-      salary: "$450 - $800 / month",
-      freeLance: true,
-      timing: "Freelance",
-      addclassNameBookmark: false,
-      badges: [
-        {
-          id: 1,
-          badgeclassName: "bg-blue-subtle text-blue",
-          badgeName: "Internship"
-        }
-      ]
-    }
-  ];
+  // const jobVacancyPost = [
+  //   {
+  //     id: 1,
+  //     companyImg: jobImage1,
+  //     jobDescription: "HTML Developer",
+  //     experience: "0-2 Yrs Exp.",
+  //     companyName: "Next-Gen Technology Pvt.Ltd",
+  //     location: "California",
+  //     salary: "$250 - $800 / month",
+  //     fullTime: true,
+  //     timing: "Full Time",
+  //     addclassNameBookmark: true,
+  //     badges: [
+  //       {
+  //         id: 1,
+  //         badgeclassName: "bg-warning-subtle text-warning",
+  //         badgeName: "Urgent"
+  //       },
+  //       {
+  //         id: 2,
+  //         badgeclassName: "bg-info-subtle text-info",
+  //         badgeName: "Private"
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     id: 2,
+  //     companyImg: jobImage2,
+  //     jobDescription: "Marketing Director",
+  //     experience: "2-4 Yrs Exp.",
+  //     companyName: "Creative Agency",
+  //     location: "New York",
+  //     salary: "$250 - $800 / month",
+  //     partTime: true,
+  //     timing: "Full Time",
+  //     addclassNameBookmark: false,
+  //     badges: [
+  //       {
+  //         id: 1,
+  //         badgeclassName: "bg-info-subtle text-info",
+  //         badgeName: "Private"
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     id: 3,
+  //     companyImg: jobImage3,
+  //     jobDescription: "HTML Developer",
+  //     experience: "2-4 Yrs Exp.",
+  //     companyName: "Next-Gen Technology Pvt.Ltd",
+  //     location: "California",
+  //     salary: "$250 - $800 / month",
+  //     freeLance: true,
+  //     timing: "Freelance",
+  //     addclassNameBookmark: true,
+  //     badges: [
+  //       {
+  //         id: 1,
+  //         badgeclassName: "bg-blue-subtle text-blue",
+  //         badgeName: "Internship"
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     id: 4,
+  //     companyImg: jobImage4,
+  //     jobDescription: "Java Developer",
+  //     experience: "0-2 Yrs Exp.",
+  //     companyName: "Next-Gen Technology Pvt.Ltd",
+  //     location: "California",
+  //     salary: "$450 - $800 / month",
+  //     freeLance: true,
+  //     timing: "Freelance",
+  //     addclassNameBookmark: false,
+  //     badges: [
+  //       {
+  //         id: 1,
+  //         badgeclassName: "bg-blue-subtle text-blue",
+  //         badgeName: "Internship"
+  //       }
+  //     ]
+  //   }
+  // ];
   return (
     <React.Fragment>
-       {isGallery ? (
+      {isGallery ? (
         <Lightbox
-        open={isGallery}
-        close={() => setisGallery(false)}
-        index={photoIndex}
-        slides={images.map((image) => ({ src: image }))}
-      />
+          open={isGallery}
+          close={() => setisGallery(false)}
+          index={photoIndex}
+          slides={images.map((image) => ({ src: image }))}
+        />
       ) : null}
       <Col lg={8}>
         <Card className="ms-lg-4 mt-4 mt-lg-0">
@@ -138,25 +138,20 @@ const RightSideContent = () => {
               <h6 className="fs-17 fw-medium mb-4">About Company</h6>
               <p className="text-muted">
                 {" "}
-                Objectively pursue diverse catalysts for change for
-                interoperable meta-services. Distinctively re-engineer
-                revolutionary meta-services and premium architectures.
-                Intrinsically incubate intuitive opportunities and real-time
-                potentialities. Appropriately communicate one-to-one technology.
+
+                At Next-Gen, we’re more than just an IT firm—we’re your partner in building a smarter, stronger future. Based in the Chicago area, we deliver world-class IT staffing, managed services, and outsourcing solutions designed to meet the unique needs of businesses everywhere. Our team sources and deploys top-tier IT professionals—from software developers and cloud engineers to network architects and helpdesk experts—ensuring your projects thrive with the right talent at the right time.
+
               </p>
 
               <p className="text-muted">
-                Intrinsically incubate intuitive opportunities and real-time
-                potentialities Appropriately communicate one-to-one technology.
+                {/* Intrinsically incubate intuitive opportunities and real-time
+                potentialities Appropriately communicate one-to-one technology. */}
               </p>
 
               <p className="text-muted">
                 {" "}
-                Exercitation photo booth stumptown tote bag Banksy, elit small
-                batch freegan sed. Craft beer elit seitan exercitation, photo
-                booth et 8-bit kale chips proident chillwave deep v laborum.
-                Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami
-                readymade swag.
+
+                We take pride in our ability to streamline operations, cut costs, and elevate quality through flexible onshore and offshore services. Whether it’s full IT outsourcing, custom software development, or strategic IT advisory, we bring expertise, integrity, and a client-first mindset to every engagement. With Staff IT Solutions, you’re not just keeping up—you’re staying ahead.
               </p>
             </div>
             <div className="candidate-portfolio mb-5">
@@ -204,7 +199,7 @@ const RightSideContent = () => {
               </Row>
             </div>
 
-            <div>
+            {/* <div>
               <h6 className="fs-17 fw-medium mb-4">Current Opening</h6>
 
               {jobVacancyPost.map((jobVacancyPostDetails, key) => (
@@ -408,7 +403,7 @@ const RightSideContent = () => {
                   </Modal>
                 </div>
               </div>
-            </div>
+            </div> */}
           </CardBody>
         </Card>
       </Col>

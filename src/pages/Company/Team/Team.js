@@ -3,7 +3,7 @@ import Section from "../Team/Section";
 import TeamPage from "../Team/TeamPage";
 
 const Team = () => {
-  document.title = "Team | Jobcy - Job Listing Template | Themesdesign";
+  
   return (
     <React.Fragment>
       <Section />

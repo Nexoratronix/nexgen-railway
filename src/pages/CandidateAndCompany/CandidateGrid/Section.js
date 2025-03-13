@@ -10,8 +10,8 @@ const Section = () => {
           <Row className="justify-content-center">
             <Col md={6}>
               <div className="text-center text-white">
-                <h3 className="mb-4">Candidate Grid</h3>
-                <div className="page-next">
+                <h3 className="mb-4">Hire Candidate</h3>
+                {/* <div className="page-next">
                   <nav
                     className="d-inline-block"
                     aria-label="breadcrumb text-center"
@@ -32,7 +32,7 @@ const Section = () => {
                       </li>
                     </ol>
                   </nav>
-                </div>
+                </div> */}
               </div>
             </Col>
           </Row>

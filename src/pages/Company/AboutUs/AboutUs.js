@@ -5,15 +5,20 @@ import Counter from "../../../pages/Company/AboutUs/Counter";
 import Features from "../../../pages/Company/AboutUs/Features";
 import Cta from "../../../pages/Company/AboutUs/Cta";
 import CompanyTestimonal from "../../../pages/Company/AboutUs/CompanyTestimonal";
+import Team from "../Team/Team";
+import CompanyDetails from "../../CandidateAndCompany/CompanyDetails/CompanyDetails";
 
 const AboutUs = () => {
-  document.title = "About Us | Jobcy - Job Listing Template | Themesdesign";
+  document.title = "About Us | Next-Gen";
   return (
     <React.Fragment>
       <Section />
       <About />
+      <CompanyDetails/>
       <Counter />
+     
       <Features />
+      <Team/>
       <Cta />
       <CompanyTestimonal />
     </React.Fragment>

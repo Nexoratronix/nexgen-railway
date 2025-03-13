@@ -40,7 +40,7 @@ const Client = () => {
   ];
   return (
     <React.Fragment>
-      <div className="py-4">
+      {/* <div className="py-4">
         <Container>
           <Row>
             {(client || []).map((item, key) => (
@@ -60,7 +60,7 @@ const Client = () => {
             ))}
           </Row>
         </Container>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

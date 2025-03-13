@@ -8,7 +8,7 @@ import { Card, CardBody, Col, Container, Row } from "reactstrap";
 import { Link } from "react-router-dom";
 
 const SignOut = () => {
-  document.title = "Sign Out | Jobcy - Job Listing Template | Themesdesign";
+  document.title = "Sign Out | Next-Gen - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <div>
@@ -49,7 +49,7 @@ const SignOut = () => {
                               <div className="text-center mb-4">
                                 <h5>You are Logged Out</h5>
                                 <p className="text-white-70">
-                                  Thank you for using Jobcy
+                                  Thank you for using Next-Gen
                                 </p>
                               </div>
                               <Link

@@ -6,7 +6,7 @@ import Section from "./Section";
 
 const BookMarkJobs = () => {
   document.title =
-    "Bookmarks Jobs | Jobcy - Job Listing Template | Themesdesign";
+    "Bookmarks Jobs | Next-Gen - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <Section />

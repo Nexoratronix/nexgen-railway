@@ -34,7 +34,7 @@ const ComingSoon = () => {
       );
     }
   };
-  document.title = "Coming Soon | Jobcy - Job Listing Template | Themesdesign";
+  document.title = "Coming Soon | Next-Gen - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <div>
@@ -55,7 +55,7 @@ const ComingSoon = () => {
                       </div>
                       <h1>We're Launching Soon..!!</h1>
                       <p className="text-muted mb-4 pb-3">
-                        Start working with Jobcy that can provide everything you
+                        Start working with Next-Gen that can provide everything you
                         need to generate awareness, drive traffic, connect.
                       </p>
                       <div id="countdown" className="d-flex">

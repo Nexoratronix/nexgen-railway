@@ -5,9 +5,9 @@ import CandidateGridDetails from "./CandidateGridDetails";
 import Section from "./Section";
 import Pagination from "../../Jobs/JobList2/Pagination";
 
-const CandidateGrid = () => {
+const HireCandidate = () => {
   document.title =
-    "Candidate Grid | Jobcy - Job Listing Template | Themesdesign";
+    "Hire Candidate | Next-Gen";
   return (
     <React.Fragment>
       <Section />
@@ -22,4 +22,4 @@ const CandidateGrid = () => {
   );
 };
 
-export default CandidateGrid;
+export default HireCandidate;

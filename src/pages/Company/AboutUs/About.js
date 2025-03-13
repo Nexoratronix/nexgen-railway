@@ -16,39 +16,35 @@ const About = () => {
                 <h6 className="sub-title">About Us</h6>
                 <h2 className="title mb-4">
                   Why <span className="text-warning fw-bold">35,000+</span>{" "}
-                  People Trust On Jobcy?
+                  People Trust On Next-Gen?
                 </h2>
                 <p className="text-muted">
-                  Start working with Jobcy that can provide everything you need
-                  to generate awareness, drive traffic, connect. Dummy text is
-                  text that is used in the publishing industry or by web
-                  designers to occupy the space which will later be filled with
-                  'real' content.
+                  At Next-Gen, we empower your business with cutting-edge IT staffing and managed services tailored to your needs. Based in the Chicago area, our expert team delivers everything you need—top-tier IT professionals, seamless outsourcing, and cost-effective solutions—to drive efficiency, reduce risks, and keep your systems running smoothly. Partner with us to unlock a workforce that’s as innovative as your vision.
                 </p>
 
                 <Row className="mt-4 pt-2">
                   <Col md={6}>
                     <ul className="list-unstyled about-list text-muted mb-0 mb-md-3">
-                      <li> Digital Marketing Solutions</li>
-                      <li> Our Talented & Experienced Marketing Agency</li>
-                      <li> Creative Design</li>
-                      <li> New jobs Innovation</li>
+                      <li>Expert IT Staffing Solutions</li>
+                      <li>Talented IT Professionals & Specialists</li>
+                      <li>Managed IT Services</li>
+                      <li>Custom Software Development</li>
                     </ul>
                   </Col>
                   <Col md={6}>
                     <ul className="list-unstyled about-list text-muted">
-                      <li> Create Resume</li>
-                      <li> 5000+ Comnpanies</li>
-                      <li> Our Blog</li>
-                      <li> and more...</li>
+                      <li>Seamless Outsourcing Options</li>
+                      <li>Support for 100+ IT Roles</li>
+                      <li>IT Advisory & Consulting</li>
+                      <li>And More...</li>
                     </ul>
                   </Col>
                 </Row>
                 <div className="mt-3">
-                  <Link to="#" className="btn btn-primary btn-hover">
+                  {/* <Link to="#" className="btn btn-primary btn-hover">
                     Learn More{" "}
                     <i className="uil uil-angle-right-b align-middle"></i>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </Col>

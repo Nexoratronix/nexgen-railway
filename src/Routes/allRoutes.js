@@ -22,7 +22,8 @@ import JobsCategories from "../pages/Jobs/JobsCategories/JobsCategories";
 
 //Candidate and Company Section
 import CandidateList from "../pages/CandidateAndCompany/CandidateList/CandidateList";
-import CandidateGrid from "../pages/CandidateAndCompany/CandidateGrid/CandidateGrid";
+// import HireCandidate from "../pages/CandidateAndCompany/CandidateGrid/CandidateGrid";
+import HireCandidate from "../pages/CandidateAndCompany/CandidateGrid/CandidateGrid";
 import CandidateDetails from "../pages/CandidateAndCompany/CandidateDetails/CandidateDetails";
 import CompanyList from "../pages/CandidateAndCompany/CompanyList/CompanyList";
 import CompanyDetails from "../pages/CandidateAndCompany/CompanyDetails/CompanyDetails";
@@ -54,9 +55,9 @@ import BookMarkJobs from "../pages/Profile/BookMarkJobs/BookMarkJobs";
 import MyProfile from "../pages/Profile/MyProfile/MyProfile";
 
 //Home Section
-const Layout1 = React.lazy(() => import('../pages/Home/Layout1/Layout1'));
+// const Layout1 = React.lazy(() => import('../pages/Home/Layout1/Layout1'));
 const Layout2 = React.lazy(() => import('../pages/Home/Layout2/Layout2'));
-const Layout3 = React.lazy(() => import('../pages/Home/Layout3/Layout3'));
+// const Layout3 = React.lazy(() => import('../pages/Home/Layout3/Layout3'));
 
 const userRoutes = [
   //profile Section(User Profile)
@@ -83,7 +84,7 @@ const userRoutes = [
   { path: "/companydetails", component: <CompanyDetails /> },
   { path: "/companylist", component: <CompanyList /> },
   { path: "/candidatedetails", component: <CandidateDetails /> },
-  { path: "/candidategrid", component: <CandidateGrid /> },
+  { path: "/HireCandidate", component: <HireCandidate /> },
   { path: "/candidatelist", component: <CandidateList /> },
 
   //Jobs Section
@@ -103,8 +104,8 @@ const userRoutes = [
   { path: "/aboutus", component: <AboutUs /> },
 
   //Home Section
-  { path: "/layout3", component: <Layout3 /> },
-  { path: "/layout2", component: <Layout1 /> },
+  // { path: "/layout3", component: <Layout3 /> },
+  // { path: "/layout2", component: <Layout1 /> },
   { path: "/", component: <Layout2 /> }
 ];
 

@@ -15,7 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import classname from "classnames";
 import withRouter from "../../components/withRouter"
-
+import { useNavigate } from "react-router-dom";
 import darkLogo from "../../assets/images/logo-dark.png";
 import lightLogo from "../../assets/images/logo-light.png";
 import userImage2 from "../../assets/images/user/img-02.jpg";
@@ -25,6 +25,7 @@ import jobImage from "../../assets/images/featured-job/img-01.png";
 import profileImage from "../../assets/images/profile.jpg";
 
 const NavBar = (props) => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -73,8 +74,8 @@ const NavBar = (props) => {
     if (matchingMenuItem) {
       activateParentDropdown(matchingMenuItem);
     }
-  },[props.router.location.pathname]);
-  
+  }, [props.router.location.pathname]);
+
   const removeActivation = (items) => {
     for (var i = 0; i < items.length; ++i) {
       var item = items[i];
@@ -144,39 +145,27 @@ const NavBar = (props) => {
             id="navbarCollapse"
           >
             <ul className="navbar-nav mx-auto navbar-center">
-              <NavItem className="dropdown dropdown-hover">
-                <NavLink
-                  to="/#"
-                  id="homedrop"
-                  className="arrow-none"
-                  onClick={() => setHome(!home)}
-                >
-                  Home <div className="arrow-down"></div>
-                </NavLink>
-                <ul
-                  className={classname("dropdown-menu dropdown-menu-center", {
-                    show: home
-                  })}
-                  aria-labelledby="homedrop"
-                >
-                  <li>
-                    <Link className="dropdown-item" to="/">
-                      Home 1
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/layout2">
-                      Home 2
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/layout3">
-                      Home 3
-                    </Link>
-                  </li>
-                </ul>
+
+              <NavItem>
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
               </NavItem>
-              <NavItem className="dropdown dropdown-hover">
+
+
+              <NavItem>
+                <Link className="nav-link" to="/aboutus">
+                  About Us
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link className="nav-link" to="/services">
+                  Services
+                </Link>
+              </NavItem>
+
+
+              {/* <NavItem className="dropdown dropdown-hover">
                 <NavLink
                   to="/#"
                   id="jobsdropdown"
@@ -220,8 +209,8 @@ const NavBar = (props) => {
                     </Link>
                   </li>
                 </ul>
-              </NavItem>
-              <li className="nav-item dropdown dropdown-hover">
+              </NavItem> */}
+              {/* <li className="nav-item dropdown dropdown-hover">
                 <Link
                   to="/#"
                   id="pagesdoropdown"
@@ -311,8 +300,8 @@ const NavBar = (props) => {
                     </Col>
                   </Row>
                 </div>
-              </li>
-              <NavItem className="dropdown dropdown-hover">
+              </li> */}
+              {/* <NavItem className="dropdown dropdown-hover">
                 <NavLink
                   to="/#"
                   id="productdropdown"
@@ -359,11 +348,49 @@ const NavBar = (props) => {
                     </Link>
                   </li>
                 </ul>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <Link className="nav-link" to="/contact">
                   Contact
                 </Link>
+              </NavItem>
+
+              <NavItem className="dropdown dropdown-hover">
+                <NavLink
+                  to="/#"
+                  id="productdropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  onClick={() => setBlog(!blog)}
+                >
+                  More <div className="arrow-down"></div>
+                </NavLink>
+                <ul
+                  className={classname("dropdown-menu dropdown-menu-center", {
+                    show: blog
+                  })}
+                  aria-labelledby="productdropdown"
+                >
+
+                  <li>
+                    <Link className="dropdown-item" to="/blogmodern">
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/jobgrid2">
+                      Opportunity
+                    </Link>
+
+                  </li>
+                  <Link className="dropdown-item" to="/jobscategories">
+                    Jobs Categories
+                  </Link>
+
+                  <Link className="dropdown-item" to="/HireCandidate">
+                    Hire Candidate
+                  </Link>
+                </ul>
               </NavItem>
             </ul>
           </Collapse>

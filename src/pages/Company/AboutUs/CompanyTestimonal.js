@@ -33,24 +33,19 @@ const CompanyTestimonal = () => {
               <div className="section-title mb-5 mb-lg-0">
                 <h4 className="title mb-4">Company Testimonial</h4>
                 <p className="text-muted">
-                  Our task must be to free ourselves by widening our circle of
-                  compassion to embrace all living creatures Integer varius
-                  lacus non magna tempor congue natuasre the whole its beauty
-                  you vestibulum egestas them feel.
+                  At Staff IT Solutions, we’re dedicated to empowering businesses with exceptional IT staffing and innovative solutions, ensuring your success through expertise, reliability, and tailored support.
                 </p>
                 <ul className="list-unstyled about-list text-muted mt-4">
-                  <li>Digital Marketing Solutions for Tomorrow.</li>
-                  <li>Our Talented & Experienced Marketing Agency.</li>
-                  <li>Create your own skin to match your brand.</li>
-                  <li>
-                    It is said that song composers of the past used texts.
-                  </li>
+                  <li>Top-tier IT staffing for every industry.</li>
+                  <li>Experienced professionals driving your projects.</li>
+                  <li>Customized outsourcing to fit your needs.</li>
+                  <li>Trusted support that keeps you ahead.</li>
                 </ul>
                 <div className="d-flex align-items-center justify-content-between mt-4">
                   <div>
-                    <Link to="/" className="btn btn-outline-primary">
+                    {/* <Link to="/" className="btn btn-outline-primary">
                       Learn More <i className="uil uil-angle-right-b ms-1"></i>
-                    </Link>
+                    </Link> */}
                   </div>
                   <ul className="list-inline about-social-menu mb-0">
                     <li className="list-inline-item">

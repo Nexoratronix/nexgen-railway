@@ -63,8 +63,7 @@ const Jobcatogaries = () => {
               <div className="section-title text-center">
                 <h3 className="title">Browser Jobs Categories </h3>
                 <p className="text-muted">
-                  Post a job to tell us about your project. We'll quickly match
-                  you with the right freelancers.
+                Share your project with us. We’ll connect you with top-tier IT talent and staffing experts in no time
                 </p>
               </div>
             </Col>

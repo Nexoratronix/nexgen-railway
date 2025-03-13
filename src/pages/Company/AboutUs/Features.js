@@ -7,49 +7,50 @@ const Features = () => {
     {
       id: 1,
       featureIcon: "uim-object-ungroup",
-      featureName: "Manage Job Ads"
+      featureName: "IT Talent Sourcing"
     },
     {
       id: 2,
       featureIcon: "uim-telegram-alt",
-      featureName: "Create CV"
+      featureName: "Custom IT Solutions"
     },
     {
       id: 3,
       featureIcon: "uim-lock-access",
-      featureName: "Privacy Policy"
+      featureName: "Secure Outsourcing"
     },
     {
       id: 4,
       featureIcon: "uim-user-md",
-      featureName: "Recruiter Profiles"
+      featureName: "Expert IT Profiles"
     },
     {
       id: 5,
       featureIcon: "uim-airplay",
-      featureName: "Display Jobs"
+      featureName: "Managed IT Services"
     },
     {
       id: 6,
       featureIcon: "uim-rocket",
-      featureName: "For Agencies"
+      featureName: "Business Scalability"
     },
     {
       id: 7,
       featureIcon: "uim-history",
-      featureName: "Quick Support"
+      featureName: "24/7 IT Support"
     },
     {
       id: 8,
       featureIcon: "uim-bookmark",
-      featureName: "Bookmark Jobs"
+      featureName: "Project Tracking"
     },
     {
       id: 9,
       featureIcon: "uim-graph-bar",
-      featureName: "Real-time Analytics"
+      featureName: "Performance Insights"
     }
   ];
+  
   return (
     <React.Fragment>
       <section className="section">
@@ -59,7 +60,7 @@ const Features = () => {
               <div className="section-title text-center mb-5">
                 <h3 className="title mb-4">Key Features</h3>
                 <p className="para-desc text-muted mx-auto">
-                  Start working with Jobcy that can provide everything you need
+                  Start working with Next-Gen that can provide everything you need
                   to generate awareness, drive traffic, connect.
                 </p>
               </div>

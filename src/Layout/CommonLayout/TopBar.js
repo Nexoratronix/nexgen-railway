@@ -117,7 +117,7 @@ const TopBar = () => {
                             <h5>Sign Up</h5>
                             <p className="text-muted">
                               Sign Up and get access to all the features of
-                              Jobcy
+                              Next-Gen
                             </p>
                           </div>
                           <Form action="#" className="auth-form">

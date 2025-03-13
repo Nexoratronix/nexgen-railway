@@ -8,66 +8,65 @@ const ServicePage = () => {
     {
       id: 1,
       serviceIcon: "uim-object-ungroup",
-      // serviceIcon: "uim:object-ungroup",
-      serviceName: "Manage Job Ads",
+      serviceName: "IT Staffing Solutions",
       serviceText:
-        "We quickly learn to fear and thus automatically avoid potentially stressful situations of all kinds."
+        "We source and deploy highly skilled IT professionals—developers, engineers, and analysts—to meet your project needs with precision and speed."
     },
     {
       id: 2,
       serviceIcon: "uim-telegram-alt",
-      serviceName: "Temp Search",
+      serviceName: "Custom Software Development",
       serviceText:
-        "It seems that only fragments of the original text remain in the Lorem Ipsum texts used fragments today."
+        "Our expert teams craft tailored software solutions, from mobile apps to enterprise systems, ensuring quality and innovation at every step."
     },
     {
       id: 3,
       serviceIcon: "uim-airplay",
-      serviceName: "Display Jobs",
+      serviceName: "Managed IT Services",
       serviceText:
-        "Intrinsically incubate intuitive opportunities and real-time potentialities. Appropriately communicate one-to-one technology."
+        "Keep your systems running smoothly with our comprehensive managed services, covering helpdesk, network management, and more."
     },
     {
       id: 4,
       serviceIcon: "uim-rocket",
-      serviceName: "For Agencies",
+      serviceName: "Business IT Outsourcing",
       serviceText:
-        "At missed advice my it no sister. Miss told ham dull knew see she spot near can. Spirit her entire her called."
+        "Scale efficiently with our flexible onshore and offshore outsourcing options, designed to reduce costs and boost productivity."
     },
     {
       id: 5,
       serviceIcon: "uim-history",
-      serviceName: "Quick Support",
+      serviceName: "24/7 IT Support",
       serviceText:
-        "Designers have a lot of tools to make a story more intersting. You can align your image to the leftcenter with a caption."
+        "Rely on our round-the-clock support to resolve issues fast, keeping your operations seamless and downtime to a minimum."
     },
     {
       id: 6,
       serviceIcon: "uim-bookmark",
-      serviceName: "Bookmark Jobs",
+      serviceName: "Project Management",
       serviceText:
-        "Becomes an interactive story that can engage users. Designers have a lot of tools to make a story more intersting."
+        "Track and manage your IT projects with our expert oversight, ensuring timely delivery and alignment with your goals."
     },
     {
       id: 7,
       serviceIcon: "uim-layers-alt",
-      serviceName: "Creative Design",
+      serviceName: "Cloud Engineering",
       serviceText:
-        "A business consulting agency is involved in the planning, implementation, and education of businesses. We work directly."
+        "Leverage our Azure and AWS expertise to build, migrate, or optimize your cloud infrastructure for maximum efficiency."
     },
     {
       id: 8,
       serviceIcon: "uim-anchor",
-      serviceName: "Stratagy & Research",
+      serviceName: "IT Advisory Services",
       serviceText:
-        "The most important aspect of beauty was, therefore, an inherent part of an object, rather than something."
+        "Plan smarter with our strategic guidance, including virtual CIO support, budgeting, and technology roadmapping tailored to your business."
     },
     {
       id: 9,
       serviceIcon: "uim-graph-bar",
-      serviceName: "Real-time Analytics",
+      serviceName: "Performance Monitoring",
       serviceText:
-        "This response is important for our ability to learn from mistakes, but it alsogives rise to self-criticism."
+        "Gain actionable insights with our real-time monitoring and reporting, helping you optimize systems and reduce risks."
     }
   ];
   return (
@@ -82,8 +81,7 @@ const ServicePage = () => {
                   <span className="text-warning">Services</span>
                 </h3>
                 <p className="text-muted">
-                  It is a long established fact that a reader will be of a page
-                  when established fact looking at its layout.
+                  From IT staffing to managed services and outsourcing, we deliver tailored, high-quality solutions to empower your business with efficiency and innovation.
                 </p>
               </div>
             </Col>
@@ -106,9 +104,9 @@ const ServicePage = () => {
                       </p>
                     </div>
                     <div className="learn-more">
-                      <Link to="#" className="form-text text-primary">
+                      {/* <Link to="#" className="form-text text-primary">
                         Learn More <i className="uil uil-angle-right-b"></i>
-                      </Link>
+                      </Link> */}
                     </div>
                   </CardBody>
                 </Card>
