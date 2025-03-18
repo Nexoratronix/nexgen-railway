@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "reactstrap";
 import { Link } from "react-router-dom";
+import darkLogo from "../../assets/images/logo/logo.png";
 
 const Footer = () => {
   const footer = [
@@ -40,53 +41,53 @@ const Footer = () => {
         }
       ]
     },
-    {
-      id: 2,
-      title: "For Jobs",
-      menu: [
-        {
-          id: 1,
-          link: "/jobscategories",
-          subTitle: "Browser Categories"
-        },
-        {
-          id: 2,
-          link: "/joblist",
-          subTitle: "Browser Jobs"
-        },
-        {
-          id: 3,
-          link: "/jobdetails",
-          subTitle: "Job Details"
-        },
-        {
-          id: 4,
-          link: "/bookmarkjobs",
-          subTitle: "Bookmark Jobs"
-        }
-      ]
-    },
-    {
-      id: 3,
-      title: "For Candidates",
-      menu: [
-        // {
-        //   id: 1,
-        //   link: "/candidatelist",
-        //   subTitle: "Candidate List"
-        // },
-        {
-          id: 2,
-          link: "/HireCandidate",
-          subTitle: "HireCandidate"
-        },
-        {
-          id: 3,
-          link: "/candidatedetails",
-          subTitle: "Candidate Details"
-        }
-      ]
-    },
+    // {
+    //   id: 2,
+    //   title: "For Jobs",
+    //   menu: [
+    //     {
+    //       id: 1,
+    //       link: "/jobscategories",
+    //       subTitle: "Browser Categories"
+    //     },
+    //     {
+    //       id: 2,
+    //       link: "/joblist",
+    //       subTitle: "Browser Jobs"
+    //     },
+    //     {
+    //       id: 3,
+    //       link: "/jobdetails",
+    //       subTitle: "Job Details"
+    //     },
+    //     {
+    //       id: 4,
+    //       link: "/bookmarkjobs",
+    //       subTitle: "Bookmark Jobs"
+    //     }
+    //   ]
+    // },
+    // {
+    //   id: 3,
+    //   title: "For Candidates",
+    //   menu: [
+    //     // {
+    //     //   id: 1,
+    //     //   link: "/candidatelist",
+    //     //   subTitle: "Candidate List"
+    //     // },
+    //     {
+    //       id: 2,
+    //       link: "/HireCandidate",
+    //       subTitle: "HireCandidate"
+    //     },
+    //     {
+    //       id: 3,
+    //       link: "/candidatedetails",
+    //       subTitle: "Candidate Details"
+    //     }
+    //   ]
+    // },
     {
       id: 4,
       title: "Support",
@@ -132,9 +133,14 @@ const Footer = () => {
       <section className="bg-footer">
         <Container>
           <Row>
-            <Col lg={4}>
+            <Col lg={8}>
               <div className="footer-item mt-4 mt-lg-0 me-lg-5">
-                <h4 className="text-white mb-4">Next-Gen</h4>
+                 
+                 <div className="d-flex">
+                 <img src={darkLogo} height="90" alt="" className="logo-dark" />
+                 <h4 className="text-white mb-4">NEXGEN</h4>
+                 </div>
+                
                 <p className="text-white-50">
                   It is a long established fact that a reader will be of a page
                   reader will be of at its layout.
@@ -176,14 +182,13 @@ const Footer = () => {
           <Row>
             <Col lg={12}>
               <p className="text-white-50 text-center mb-0">
-                {new Date().getFullYear()} &copy; Next-Gen - Job Listing Page
-                Template by{" "}
+                {new Date().getFullYear()} &copy; NEXGEN
                 <Link
-                  to="//themesdesign.in/"
+                  to="//"
                   target="_blank"
                   className="text-reset text-decoration-underline"
                 >
-                  Themesdesign
+                  {/* Add any additional text if needed */}
                 </Link>
               </p>
             </Col>

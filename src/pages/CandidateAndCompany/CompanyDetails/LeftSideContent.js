@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, CardBody, Col } from "reactstrap";
 
 //Import images
-import featureImage from "../../../assets/images/featured-job/img-01.png";
+import featureImage from "../../../assets/images/logo/logo.png";
 
 const LeftSideContent = () => {
   return (
@@ -14,7 +14,7 @@ const LeftSideContent = () => {
             <div className="candidate-profile text-center">
               <img
                 src={featureImage}
-                alt=""
+                alt=""  
                 className="avatar-lg rounded-circle"
               />
               <h6 className="fs-18 mb-1 mt-4">Next-Gen Technology Pvt.Ltd</h6>

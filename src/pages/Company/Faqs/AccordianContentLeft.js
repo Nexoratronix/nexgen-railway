@@ -20,15 +20,12 @@ const AccordianContentLeft = () => {
             onClick={toggleFirst}
             type="button"
           >
-            Where does it come from ?
+            What types of IT professionals can you provide through your staffing solutions?
           </button>
         </h2>
         <Collapse isOpen={isCollapseFirst} id="buying-one">
           <div className="accordion-body">
-            If several languages coalesce, the grammar of the resulting language
-            is more simple and regular than that of the individual languages.
-            The new common language will be more simple and regular than the
-            existing European languages.
+          We source a wide range of highly skilled IT professionals, including developers, software engineers, data analysts, cybersecurity experts, and network administrators. Whether you need short-term support or long-term talent, we match you with professionals who fit your project’s specific requirements.
           </div>
         </Collapse>
       </div>
@@ -40,15 +37,12 @@ const AccordianContentLeft = () => {
             onClick={toggleSecond}
             type="button"
           >
-            How Next-Gen Work ?
+           How does your custom software development process work?
           </button>
         </h2>
         <Collapse isOpen={isCollapseSecond} id="buying-two">
           <div className="accordion-body">
-            To an English person, it will seem like simplified English, as a
-            skeptical Cambridge friend of mine told me what Occidental is. The
-            European languages are members of the same family. Their separate
-            existence is a myth.
+          Our process starts with understanding your business goals and technical needs. From there, we design, develop, and test a tailored solution—be it a mobile app, web platform, or enterprise system. We prioritize collaboration, regular updates, and quality assurance to deliver innovative software on time and within budget.
           </div>
         </Collapse>
       </div>
@@ -60,15 +54,12 @@ const AccordianContentLeft = () => {
             onClick={toggleThird}
             type="button"
           >
-            What is your shipping policy?
+            What’s included in your managed IT services?
           </button>
         </h2>
         <Collapse isOpen={isCollapseThird} id="buying-three">
           <div className="accordion-body">
-            Everyone realizes why a new common language would be desirable: one
-            could refuse to pay expensive translators. To achieve this, it would
-            be necessary to have uniform grammar, pronunciation and more common
-            words.
+          Our managed IT services cover everything from proactive network monitoring and maintenance to helpdesk support and system upgrades. We ensure your IT infrastructure runs smoothly, minimizing downtime and letting you focus on your core business while we handle the tech.
           </div>
         </Collapse>
       </div>

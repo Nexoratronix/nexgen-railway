@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import classname from "classnames";
 import withRouter from "../../components/withRouter"
 import { useNavigate } from "react-router-dom";
-import darkLogo from "../../assets/images/logo-dark.png";
+import darkLogo from "../../assets/images/logo/logo.png";
 import lightLogo from "../../assets/images/logo-light.png";
 import userImage2 from "../../assets/images/user/img-02.jpg";
 import jobImage4 from "../../assets/images/featured-job/img-04.png";
@@ -127,8 +127,8 @@ const NavBar = (props) => {
       >
         <Container fluid className="custom-container">
           <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
-            <img src={darkLogo} height="22" alt="" className="logo-dark" />
-            <img src={lightLogo} height="22" alt="" className="logo-light" />
+            <img src={darkLogo} height="80" alt="" className="logo-dark" />
+            {/* <img src={lightLogo} height="22" alt="" className="logo-light" /> */}
           </Link>
           <div>
             <NavbarToggler
@@ -395,7 +395,7 @@ const NavBar = (props) => {
             </ul>
           </Collapse>
 
-          <ul className="header-menu list-inline d-flex align-items-center mb-0">
+          {/* <ul className="header-menu list-inline d-flex align-items-center mb-0">
             <Dropdown
               isOpen={notification}
               toggle={dropDownnotification}
@@ -579,7 +579,7 @@ const NavBar = (props) => {
                 </li>
               </DropdownMenu>
             </Dropdown>
-          </ul>
+          </ul> */}
         </Container>
       </nav>
     </React.Fragment>

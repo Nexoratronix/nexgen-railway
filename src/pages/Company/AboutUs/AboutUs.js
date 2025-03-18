@@ -18,7 +18,7 @@ const AboutUs = () => {
       <Counter />
      
       <Features />
-      <Team/>
+      {/* <Team/> */}
       <Cta />
       <CompanyTestimonal />
     </React.Fragment>

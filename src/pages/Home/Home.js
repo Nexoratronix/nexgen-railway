@@ -6,17 +6,19 @@ import Cta from "./Cta";
 import Testimonal from "./Testimonal";
 import Blog from "../Home/Blog";
 import Client from "./Client";
+import Services from "../Company/Services/Services";
 
 const Home = () => {
   return (
     <React.Fragment>
-      <Jobcatogaries />
-      <JobList />
+      {/* <Jobcatogaries /> */}
+      {/* <JobList /> */}
       <HowItWorks />
+      <Services/>
       <Cta />
       <Testimonal />
-      <Blog />
-      <Client />
+      {/* <Blog /> */}
+      {/* <Client /> */}
     </React.Fragment>
   );
 };

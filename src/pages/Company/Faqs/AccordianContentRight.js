@@ -21,15 +21,12 @@ const AccordianContentRight = () => {
             onClick={toggleFourth}
             type="button"
           >
-            Where To Place A FAQ Page
+            How can outsourcing IT to your company benefit my business?
           </button>
         </h2>
         <Collapse isOpen={isCollapseFourth} id="general-four">
           <div className="accordion-body">
-            Just as the name suggests, a FAQ page is all about simple questions
-            and answers. Gather common questions your customers have asked from
-            your support team and include them in the FAQ, Use categories to
-            organize questions related to specific topics.
+          Outsourcing with us reduces operational costs, provides access to specialized expertise, and allows you to scale your IT resources as needed. Our flexible onshore and offshore options ensure you get high-quality support tailored to your budget and goals, without the overhead of an in-house team.
           </div>
         </Collapse>
       </div>
@@ -41,14 +38,12 @@ const AccordianContentRight = () => {
             onClick={toggleFifth}
             type="button"
           >
-            Why do we use it ?
+            How quickly can your 24/7 IT support team respond to an issue?
           </button>
         </h2>
         <Collapse isOpen={isCollapseFifth} id="general-five">
           <div className="accordion-body">
-            It will be as simple as Occidental; in fact, it will be Occidental.
-            To an English person, it will seem like simplified English, as a
-            skeptical Cambridge friend of mine told me what Occidental.
+          Our 24/7 IT support team is always on standby to address your concerns. For critical issues, we aim to respond within minutes, ensuring fast resolution to keep your operations running seamlessly, day or night.
           </div>
         </Collapse>
       </div>
@@ -60,15 +55,12 @@ const AccordianContentRight = () => {
             onClick={toggleSixth}
             type="button"
           >
-            Where can I get some ?
+          What makes your cloud engineering services stand out?
           </button>
         </h2>
         <Collapse isOpen={isCollapseSixth} id="general-six">
           <div className="accordion-body">
-            To an English person, it will seem like simplified English, as a
-            skeptical Cambridge friend of mine told me what Occidental is. The
-            European languages are members of the same family. Their separate
-            existence is a myth.
+          Our cloud engineering team specializes in Azure and AWS, offering end-to-end solutions—from migration and setup to optimization and security. We focus on maximizing efficiency, scalability, and cost-effectiveness, tailoring your cloud infrastructure to support your business growth.
           </div>
         </Collapse>
       </div>

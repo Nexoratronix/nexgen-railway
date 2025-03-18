@@ -28,7 +28,7 @@ const FaqContent = () => {
       <section className="section">
         <Container>
           <Row className="justify-content-center">
-            <Col lg={8}>
+            {/* <Col lg={8}>
               <Nav
                 className="faq-menu nav-fill nav-pills justify-content-center"
                 id="pills-tab"
@@ -82,7 +82,7 @@ const FaqContent = () => {
                   </NavLink>
                 </NavItem>
               </Nav>
-            </Col>
+            </Col> */}
           </Row>
           <Row className="align-items-center mt-5">
             <Col lg={12}>

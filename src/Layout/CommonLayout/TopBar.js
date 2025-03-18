@@ -58,7 +58,7 @@ const TopBar = () => {
 
   return (
     <React.Fragment>
-      <div className="top-bar" style={{ zIndex: 1030 }}>
+      {/* <div className="top-bar" style={{ zIndex: 1030 }}>
         <Container fluid className="custom-container">
           <Row className="g-0 align-items-center">
             <Col md={7}>
@@ -268,7 +268,7 @@ const TopBar = () => {
             </Col>
           </Row>
         </Container>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

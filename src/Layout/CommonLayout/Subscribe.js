@@ -7,7 +7,7 @@ import subscribeImg from "../../assets/images/subscribe.png";
 const Subscribe = () => {
   return (
     <React.Fragment>
-      <section className="bg-subscribe">
+      {/* <section className="bg-subscribe">
         <Container>
           <Row className="justify-content-between align-items-center">
             <Col lg={6}>
@@ -44,7 +44,7 @@ const Subscribe = () => {
         <div className="email-img d-none d-lg-block">
           <img src={subscribeImg} alt="" className="img-fluid" />
         </div>
-      </section>
+      </section> */}
     </React.Fragment>
   );
 };
