@@ -63,15 +63,15 @@ const TopBar = () => {
           <Row className="g-0 align-items-center">
             <Col md={7}>
               <ul className="list-inline mb-0 text-center text-md-start">
-                <li className="list-inline-item">
+                <li className="list-inline-item ">
                   <p className="fs-13 mb-0">
                     {" "}
-                    <i className="mdi mdi-map-marker"></i>Location:{" "}
+                    <i className="mdi mdi-map-marker "></i>Location:{" "}
                     <a
                       href="https://www.google.com/maps/search/?api=1&query=23704+100th+Ave+SE+Suite+A+104+Kent+WA+98031"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-dark"
+                      className="text-dark text-decoration-none"
                     >
                       23704 100th ave se suite a 104 kent wa 98031
                     </a>

@@ -109,21 +109,18 @@ const ContactContent = () => {
                       href="https://www.google.com/maps/search/?api=1&query=23704+100th+Ave+SE+Suite+A+104+Kent+WA+98031"
                       target="_blank"
                       rel="noopener noreferrer"
-                      style={{ textDecoration: "none", color: "inherit" }}
+                      className="text-dark text-decoration-none"
                     >
-                      <p className="mb-0">
-                        23704 100th Ave SE Suite A 104, Kent, WA 98031
-                      </p>
+                      23704 100th ave se suite a 104 kent wa 98031
                     </a>
                   </div>
-
                 </div>
                 <div className="d-flex text-muted align-items-center mt-2">
                   <div className="flex-shrink-0 fs-22 text-primary">
                     <i className="uil uil-envelope"></i>
                   </div>
                   <div className="flex-grow-1 ms-2">
-                    <p className="mb-0">contactus@NEXGENStaffing.com</p>
+                    <p className="mb-0 text-dark">info@nexgenstaffing.com</p>
                   </div>
                 </div>
                 <div className="d-flex text-muted align-items-center mt-2">
@@ -132,7 +129,7 @@ const ContactContent = () => {
                   </div>
                   <div className="flex-grow-1 ms-2">
                     <a href="tel:2066083534" style={{ textDecoration: "none", color: "inherit" }}>
-                      <p className="mb-0">206-608-3534</p>
+                      <p className="mb-0 text-dark">206-608-3534</p>
                     </a>
                   </div>
 

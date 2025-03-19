@@ -73,29 +73,29 @@ const Footer = () => {
               </div>
             </Col>
 
-           
+
             <Col lg={8}>
               <Row>
-              {footer.map((footerdetails, key) => (
-  <Col lg={3} xs={6} key={key}>
-    <div className="footer-item mt-4 mt-lg-0">
-      <p className="fs-16 text-white mb-4">{footerdetails.title}</p>
-      {(footerdetails.menu || []).map((menuInner, key) => (
-        <ul className="list-unstyled footer-list mb-0" key={key}>
-          <li className="text-white">
-            <Link
-              to={menuInner.link}
-              className="text-white text-decoration-none"
-            >
-              <i className="mdi mdi-chevron-right text-white"></i>{" "}
-              {menuInner.subTitle}
-            </Link>
-          </li>
-        </ul>
-      ))}
-    </div>
-  </Col>
-))}
+                {footer.map((footerdetails, key) => (
+                  <Col lg={3} xs={6} key={key}>
+                    <div className="footer-item mt-4 mt-lg-0">
+                      <p className="fs-16 text-white mb-4">{footerdetails.title}</p>
+                      {(footerdetails.menu || []).map((menuInner, key) => (
+                        <ul className="list-unstyled footer-list mb-0" key={key}>
+                          <li className="text-white">
+                            <Link
+                              to={menuInner.link}
+                              className="text-white text-decoration-none"
+                            >
+                              <i className="mdi mdi-chevron-right text-white"></i>{" "}
+                              {menuInner.subTitle}
+                            </Link>
+                          </li>
+                        </ul>
+                      ))}
+                    </div>
+                  </Col>
+                ))}
 
 
                 {/* Contact Info */}
@@ -118,13 +118,13 @@ const Footer = () => {
                       <li className="text-white">
                         <i className="mdi mdi-email"></i>{" "}
                         <a href="mailto:info@nexgen.com" className="text-white text-decoration-none">
-                          info@nexgen.com
+                          info@nexgenstaffing.com
                         </a>
                       </li>
                       <li className="text-white text-decoration-none">
                         <i className="mdi mdi-phone"></i>{" "}
                         <a href="tel:+12065551234" className="text-white text-decoration-none">
-                          2066083534
+                        206-608-3534
                         </a>
                       </li>
 
