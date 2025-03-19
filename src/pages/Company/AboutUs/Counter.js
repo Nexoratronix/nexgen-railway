@@ -12,11 +12,11 @@ const Counter = () => {
               <div className="counter-box mt-3">
                 <div className="counters counter_custom text-center">
                   <CountUp
-                    end={10000}
+                    end={500}
                     duration={1}
                     className="counter mb-0"
                   ></CountUp>
-                  <h6 className="fs-16 mt-3 ">Available Jobs</h6>
+                  <h6 className="fs-16 mt-3">IT Professionals Deployed</h6>
                 </div>
               </div>
             </Col>
@@ -24,11 +24,11 @@ const Counter = () => {
               <div className="counter-box mt-3">
                 <div className="counters counter_custom text-center">
                   <CountUp
-                    end={7500}
+                    end={300}
                     duration={1}
                     className="counter mb-0"
                   ></CountUp>
-                  <h6 className="fs-16 mt-3">Applications</h6>
+                  <h6 className="fs-16 mt-3">Custom Projects Delivered</h6>
                 </div>
               </div>
             </Col>
@@ -36,12 +36,12 @@ const Counter = () => {
               <div className="counter-box mt-3">
                 <div className="counters counter_custom text-center">
                   <CountUp
-                    end={8.85}
-                    decimals={2}
+                    end={99.9}
+                    decimals={1}
                     duration={1}
                     className="counter mb-0"
                   ></CountUp>
-                  <h6 className="fs-16 mt-3">Positive Feedback</h6>
+                  <h6 className="fs-16 mt-3">Uptime Guaranteed (%)</h6>
                 </div>
               </div>
             </Col>
@@ -49,11 +49,11 @@ const Counter = () => {
               <div className="counter-box mt-3">
                 <div className="counters counter_custom text-center">
                   <CountUp
-                    end={9875}
+                    end={450}
                     duration={1}
                     className="counter mb-0"
                   ></CountUp>
-                  <h6 className="fs-16 mt-3">Members</h6>
+                  <h6 className="fs-16 mt-3">Businesses Supported</h6>
                 </div>
               </div>
             </Col>

@@ -3,44 +3,43 @@ import { Container, Row, Col, Card, CardImg, CardBody } from "reactstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 
-//swiper css
+// Swiper CSS
+import "swiper/css";
+import "swiper/css/virtual";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
-import 'swiper/css';
-import 'swiper/css/virtual';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
 
-//Images import
-import MailChimp from "../../assets/images/logo/mailchimp.svg";
-import WordPress from "../../assets/images/logo/wordpress.svg";
-import Instagram from "../../assets/images/logo/Instagram.svg";
+import ITStaffing from "../../assets/images/logo/itstaffing.jpeg"; 
+import CloudIcon from "../../assets/images/logo/cloudtestimonial.png"; 
+import SupportIcon from "../../assets/images/logo/itsupport.png"; 
 
-const Testimonal = () => {
-  const testimonal = [
+const Testimonial = () => {
+  const testimonials = [
     {
       id: 1,
-      image: MailChimp,
+      image: ITStaffing,
       content:
-        "Very well thought out and articulate communication.Clear milestones, deadlines and fast work. Patience. Infinite patience. No shortcuts. Even if the client is being careless.",
-      name: "Jeffrey Montgomery",
-      occupation: "Product Manager"
+        "Their team provided us with top-notch developers in record time. Clear communication, precise milestones, and a seamless integration into our workflow made all the difference.",
+      name: "Michael Reynolds",
+      occupation: "IT Director",
     },
     {
       id: 2,
-      image: WordPress,
+      image: CloudIcon,
       content:
-        "Very well thought out and articulate communication.Clear milestones, deadlines and fast work. Patience. Infinite patience. No shortcuts. Even if the client is being careless.",
-      name: "Rebecca Swartz",
-      occupation: "Creative Designer"
+        "The cloud migration was flawless—fast, secure, and tailored to our needs. Their expertise in AWS saved us time and resources while boosting performance.",
+      name: "Sarah Thompson",
+      occupation: "Operations Manager",
     },
     {
       id: 3,
-      image: Instagram,
+      image: SupportIcon,
       content:
-        "Very well thought out and articulate communication.Clear milestones, deadlines and fast work. Patience. Infinite patience. No shortcuts. Even if the client is being careless.",
-      name: "Charles Dickens",
-      occupation: "Store Assistant"
-    }
+        "Their 24/7 support team resolved a critical issue in minutes, keeping our systems online during a peak period. Professional, patient, and reliable every step of the way.",
+      name: "David Patel",
+      occupation: "Business Owner",
+    },
   ];
 
   return (
@@ -50,10 +49,9 @@ const Testimonal = () => {
           <Row className="justify-content-center">
             <Col lg={6}>
               <div className="section-title text-center mb-4 pb-2">
-                <h3 className="title mb-3">Happy Candidates</h3>
+                <h3 className="title mb-3">Satisfied Clients</h3>
                 <p className="text-muted">
-                  Post a job to tell us about your project. We'll quickly match
-                  you with the right freelancers.
+                  Discover how our IT solutions—staffing, software, and support—drive success for businesses like yours.
                 </p>
               </div>
             </Col>
@@ -69,23 +67,25 @@ const Testimonal = () => {
                 pagination={{ clickable: true }}
               >
                 <div className="swiper-wrapper">
-                  {(testimonal || []).map((testimonalDetails, key) => (
+                  {(testimonials || []).map((testimonialDetails, key) => (
                     <SwiperSlide key={key}>
                       <Card className="testi-box">
                         <CardBody>
                           <div className="mb-4">
                             <CardImg
-                              src={testimonalDetails.image}
-                              height="50"
+                              src={testimonialDetails.image}
+                              height="100"
+                              width="100"
                               alt=""
+                              style={{height:"4rem", width:"5rem"}}
                             />
                           </div>
                           <p className="testi-content lead text-muted mb-4">
-                            {testimonalDetails.content}
+                            "{testimonialDetails.content}"
                           </p>
-                          <h5 className="mb-0">{testimonalDetails.name}</h5>
+                          <h5 className="mb-0">{testimonialDetails.name}</h5>
                           <p className="text-muted mb-0">
-                            {testimonalDetails.occupation}
+                            {testimonialDetails.occupation}
                           </p>
                         </CardBody>
                       </Card>
@@ -102,4 +102,4 @@ const Testimonal = () => {
   );
 };
 
-export default Testimonal;
+export default Testimonial;

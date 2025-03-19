@@ -127,7 +127,7 @@ const NavBar = (props) => {
       >
         <Container fluid className="custom-container">
           <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
-            <img src={darkLogo} height="80" alt="" className="logo-dark" />
+            <img src={darkLogo} height="80" alt="" className="logo-dark" style={{height:"6rem", width:"6rem" }} />
             {/* <img src={lightLogo} height="22" alt="" className="logo-light" /> */}
           </Link>
           <div>
@@ -355,7 +355,7 @@ const NavBar = (props) => {
                 </Link>
               </NavItem>
 
-              <NavItem className="dropdown dropdown-hover">
+              {/* <NavItem className="dropdown dropdown-hover">
                 <NavLink
                   to="/#"
                   id="productdropdown"
@@ -391,7 +391,7 @@ const NavBar = (props) => {
                     Hire Candidate
                   </Link>
                 </ul>
-              </NavItem>
+              </NavItem> */}
             </ul>
           </Collapse>
 

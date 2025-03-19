@@ -14,10 +14,12 @@ const LeftSideContent = () => {
             <div className="candidate-profile text-center">
               <img
                 src={featureImage}
-                alt=""  
+                alt=""
                 className="avatar-lg rounded-circle"
+                style={{ width: "104px", height: "103px" }}
               />
-              <h6 className="fs-18 mb-1 mt-4">Next-Gen Technology Pvt.Ltd</h6>
+
+              <h6 className="fs-18 mb-1 mt-4">NexGen</h6>
               <p className="text-muted mb-4"> Feb 2025</p>
               <ul className="candidate-detail-social-menu list-inline mb-0">
                 <li className="list-inline-item">

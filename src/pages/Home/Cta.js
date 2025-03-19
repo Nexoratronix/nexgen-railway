@@ -18,7 +18,7 @@ const Cta = () => {
                   From staffing and software development to cloud engineering and 24/7 support, we’ve got your IT needs covered. Let’s build your success together.
                 </p>
                 <div className="mt-4 pt-2">
-                  <Link to="#" className="btn btn-primary btn-hover">
+                  <Link to="/contact" className="btn btn-primary btn-hover">
                     Get Started Today{" "}
                     <i className="uil uil-rocket align-middle ms-1"></i>
                   </Link>

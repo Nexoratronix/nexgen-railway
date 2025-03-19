@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "reactstrap";
 import { Link } from "react-router-dom";
-import darkLogo from "../../assets/images/logo/logo.png";
+import whiteLogo from "../../assets/images/logo/NexGenlogowithbg.png";
 
 const Footer = () => {
   const footer = [
@@ -24,21 +24,21 @@ const Footer = () => {
           link: "/services",
           subTitle: "Services"
         },
-        {
-          id: 4,
-          link: "/blogmodern",
-          subTitle: "Blog"
-        },
-        {
-          id: 5,
-          link: "/team",
-          subTitle: "Team"
-        },
-        {
-          id: 6,
-          link: "/pricing",
-          subTitle: "Pricing"
-        }
+        // {
+        //   id: 4,
+        //   link: "/blogmodern",
+        //   subTitle: "Blog"
+        // },
+        // {
+        //   id: 5,
+        //   link: "/team",
+        //   subTitle: "Team"
+        // },
+        // {
+        //   id: 6,
+        //   link: "/pricing",
+        //   subTitle: "Pricing"
+        // }
       ]
     },
     // {
@@ -135,15 +135,29 @@ const Footer = () => {
           <Row>
             <Col lg={8}>
               <div className="footer-item mt-4 mt-lg-0 me-lg-5">
-                 
-                 <div className="d-flex">
-                 <img src={darkLogo} height="90" alt="" className="logo-dark" />
-                 <h4 className="text-white mb-4">NEXGEN</h4>
-                 </div>
-                
+
+                <div className="d-flex ">
+                  <Link to="/">  
+                    <img
+                      src={whiteLogo}
+                      height="90"
+                      alt=""
+                      className="logo-footer"
+                      style={{
+                        width: "104px",
+                        height: "103px",
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        cursor: "pointer"  // Pointer cursor for better UX
+                      }}
+                    />
+                  </Link>
+
+                  {/* <h4 className="text-white mb-4">NEXGEN</h4> */}
+                </div>
+
                 <p className="text-white-50">
-                  It is a long established fact that a reader will be of a page
-                  reader will be of at its layout.
+                  Empowering your business with expert IT solutions—staffing, software development, cloud engineering, and 24/7 support. Your success is our mission.
                 </p>
                 <p className="text-white mt-3">Follow Us on:</p>
                 <ul className="footer-social-menu list-inline mb-0">
