@@ -66,14 +66,20 @@ const TopBar = () => {
                 <li className="list-inline-item">
                   <p className="fs-13 mb-0">
                     {" "}
-                    <i className="mdi mdi-map-marker"></i> Your Location:{" "}
-                    <Link to="#" className="text-dark">
-                      USA
-                    </Link>
+                    <i className="mdi mdi-map-marker"></i>Location:{" "}
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=23704+100th+Ave+SE+Suite+A+104+Kent+WA+98031"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-dark"
+                    >
+                      23704 100th ave se suite a 104 kent wa 98031
+                    </a>
+
                   </p>
                 </li>
                 <li className="list-inline-item">
-                  <ul className="topbar-social-menu list-inline mb-0">
+                  {/* <ul className="topbar-social-menu list-inline mb-0">
                     {(iconTobar || []).map((icon, key) => (
                       <li className="list-inline-item" key={key}>
                         <Link to="/" className="social-link">
@@ -81,7 +87,7 @@ const TopBar = () => {
                         </Link>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </li>
               </ul>
             </Col>
