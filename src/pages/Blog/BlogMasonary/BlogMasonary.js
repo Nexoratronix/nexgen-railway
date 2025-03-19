@@ -4,7 +4,7 @@ import MasonaryContent from "../../Blog/BlogMasonary/MasonaryContent";
 
 const BlogMasonary = () => {
   document.title =
-    "Blog Masonary | Next-Gen - Job Listing Template | Themesdesign";
+    "Blog Masonary | NEXGEN Staffing - Job Listing Template | Themesdesign";
 
   return (
     <React.Fragment>

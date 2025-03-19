@@ -1,5 +1,9 @@
 import React from "react";
 import Routes from "./Routes/index";
+import './App.css';
+
+
+
 
 //import Custom Style scss
 import "./assets/scss/themes.scss";

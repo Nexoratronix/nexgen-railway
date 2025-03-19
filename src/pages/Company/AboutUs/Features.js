@@ -58,9 +58,9 @@ const Features = () => {
           <Row className="justify-content-center">
             <Col lg={7}>
               <div className="section-title text-center mb-5">
-                <h3 className="title mb-4">Key Features</h3>
+                <h3 className="title mb-4 myheading">Key Features</h3>
                 <p className="para-desc text-muted mx-auto">
-                  Start working with Next-Gen that can provide everything you need
+                  Start working with NEXGEN Staffing that can provide everything you need
                   to generate awareness, drive traffic, connect.
                 </p>
               </div>

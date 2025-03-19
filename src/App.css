@@ -39,3 +39,17 @@
 .logo-footer {
   border-radius: 10rem;
 }
+
+.myheading {
+  background: linear-gradient(45deg, #ff5733, #ffbd69, #ff0066); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -ms-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 28px;
+  letter-spacing: 1px; 
+}
+

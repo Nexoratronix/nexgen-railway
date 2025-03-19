@@ -31,7 +31,7 @@ const CompanyTestimonal = () => {
           <Row className="align-items-center">
             <Col lg={5}>
               <div className="section-title mb-5 mb-lg-0">
-                <h4 className="title mb-4">Company Testimonial</h4>
+                <h4 className="title mb-4 myheading">Company Testimonial</h4>
                 <p className="text-muted">
                   At Staff IT Solutions, we’re dedicated to empowering businesses with exceptional IT staffing and innovative solutions, ensuring your success through expertise, reliability, and tailored support.
                 </p>

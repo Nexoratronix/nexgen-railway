@@ -7,7 +7,7 @@ import Pagination from "../../Jobs/JobList2/Pagination";
 
 const CandidateList = () => {
   document.title =
-    "Candidate List | Next-Gen - Job Listing Template | Themesdesign";
+    "Candidate List | NEXGEN Staffing - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <Section />

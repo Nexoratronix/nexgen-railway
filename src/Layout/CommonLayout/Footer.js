@@ -7,7 +7,7 @@ const Footer = () => {
   const footer = [
     {
       id: 1,
-      title: "Company",
+      title: "Quick LInks",
       menu: [
         {
           id: 1,
@@ -137,15 +137,15 @@ const Footer = () => {
               <div className="footer-item mt-4 mt-lg-0 me-lg-5">
 
                 <div className="d-flex ">
-                  <Link to="/">  
+                  <Link to="/">
                     <img
                       src={whiteLogo}
                       height="90"
                       alt=""
                       className="logo-footer"
                       style={{
-                        width: "104px",
-                        height: "103px",
+                        width: "4.5rem",
+                        height: "4.5rem",
                         borderRadius: "50%",
                         objectFit: "cover",
                         cursor: "pointer"  // Pointer cursor for better UX
@@ -156,8 +156,9 @@ const Footer = () => {
                   {/* <h4 className="text-white mb-4">NEXGEN</h4> */}
                 </div>
 
-                <p className="text-white-50">
-                  Empowering your business with expert IT solutions—staffing, software development, cloud engineering, and 24/7 support. Your success is our mission.
+                <h3 className="text-white">Your IT Staffing Partner in the US</h3>
+                <p className="text-white">
+                  We connect US businesses with top IT talent for temporary, permanent, or remote roles. Based here, we understand tech trends and deliver tailored solutions. From developers to cybersecurity experts, we’ve got you covered for 2025 and beyond.
                 </p>
                 <p className="text-white mt-3">Follow Us on:</p>
                 <ul className="footer-social-menu list-inline mb-0">
@@ -196,15 +197,16 @@ const Footer = () => {
           <Row>
             <Col lg={12}>
               <p className="text-white-50 text-center mb-0">
-                {new Date().getFullYear()} &copy; NEXGEN
+                {new Date().getFullYear()} &copy; NEXGEN Staffing. All Rights Reserved.
                 <Link
-                  to="//"
+                  to="/privacyandpolicy"
                   target="_blank"
-                  className="text-reset text-decoration-underline"
+                  className="text-reset text-decoration-underline ms-1"
                 >
-                  {/* Add any additional text if needed */}
+                  Terms & Conditions
                 </Link>
               </p>
+
             </Col>
           </Row>
         </Container>

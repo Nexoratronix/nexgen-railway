@@ -13,9 +13,9 @@ const ContactContent = () => {
           <Row className="align-items-center mt-5">
             <Col lg={6}>
               <div className="section-title mt-4 mt-lg-0">
-                <h3 className="title">Get in touch</h3>
+                <h3 className="title myheading">Get in touch</h3>
                 <p className="text-muted">
-                  Start working with Next-Gen that can provide everything you need
+                  Start working with NEXGEN Staffing that can provide everything you need
                   to generate awareness, drive traffic, connect.
                 </p>
                 <Form
@@ -115,7 +115,7 @@ const ContactContent = () => {
                     <i className="uil uil-envelope"></i>
                   </div>
                   <div className="flex-grow-1 ms-2">
-                    <p className="mb-0">contactus@Next-Gen.com</p>
+                    <p className="mb-0">contactus@NEXGEN Staffing.com</p>
                   </div>
                 </div>
                 <div className="d-flex text-muted align-items-center mt-2">

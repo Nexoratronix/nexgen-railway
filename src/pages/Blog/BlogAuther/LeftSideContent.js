@@ -64,7 +64,7 @@ const LeftSideContent = () => {
                 />
                 <h6 className="fs-17">Gabriel Palmer</h6>
                 <p className="text-muted">
-                  Start working with Next-Gen that can provide you need drive
+                  Start working with NEXGEN Staffing that can provide you need drive
                   everything to generate awareness, traffic, connect.
                 </p>
               </div>

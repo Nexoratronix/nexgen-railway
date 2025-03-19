@@ -4,7 +4,7 @@ import PrivacyAndPolicyPage from "../../Company/PrivacyAndPolicy/PrivacyAndPolic
 
 const PrivacyAndPolicy = () => {
   document.title =
-    "Privacy & Policy | Next-Gen";
+    "Privacy & Policy | NEXGEN Staffing";
   return (
     <React.Fragment>
       <Section />

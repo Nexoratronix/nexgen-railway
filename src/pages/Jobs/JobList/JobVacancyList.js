@@ -34,7 +34,7 @@ const JobVacancyList = () => {
       id: 2,
       companyImg: jobImage2,
       jobDescription: "Digital Marketing Manager",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       location: "Phoenix, Arizona",
       jobPostTime: "15 min ago",
       fullTime: true,

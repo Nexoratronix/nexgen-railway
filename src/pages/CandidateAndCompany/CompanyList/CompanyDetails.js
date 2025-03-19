@@ -18,7 +18,7 @@ const CompanyDetails = () => {
     {
       id: 1,
       jobImg: jobImage1,
-      compnayName: "Next-Gen Consulting",
+      compnayName: "NEXGEN Staffing Consulting",
       location: "New York",
       numberOfVacancy: 52,
       label: true,

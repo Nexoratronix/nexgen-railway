@@ -3,7 +3,10 @@ import Home from "../Home";
 import Section from "../Layout2/Section";
 
 const Layout2 = () => {
-  document.title = "Home | Next-Gen";
+  // document.title = "Home | NEXGEN Staffing";
+
+ 
+
   return (
     <React.Fragment>
       <Section />

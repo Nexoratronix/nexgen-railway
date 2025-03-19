@@ -73,7 +73,7 @@ const LeftSideContent = () => {
                   <label className="text-dark">Website</label>
                   <div>
                     <p className="text-muted text-break mb-0">
-                      www.Next-gentecnologypvt.ltd.com
+                      www.NEXGEN Staffingtecnologypvt.ltd.com
                     </p>
                   </div>
                 </div>

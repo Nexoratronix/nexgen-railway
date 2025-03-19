@@ -5,7 +5,7 @@ import Section from "./Section";
 import Pagination from "../JobList2/Pagination";
 
 const JobGrid2 = () => {
-  document.title = "Opportunities | Next-Gen";
+  document.title = "Opportunities | NEXGEN Staffing";
   return (
     <React.Fragment>
       <Section />
@@ -14,7 +14,7 @@ const JobGrid2 = () => {
           <Row>
             <JobVacancy2 />
           </Row>
-          <Pagination />
+          {/* <Pagination /> */}
         </Container>
       </section>
     </React.Fragment>

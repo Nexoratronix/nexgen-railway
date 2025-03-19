@@ -11,7 +11,7 @@ import { Form } from "react-bootstrap";
 
 const ResetPassword = () => {
   document.title =
-    "Reset Password | Next-Gen - Job Listing Template | Themesdesign";
+    "Reset Password | NEXGEN Staffing - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <div>
@@ -51,7 +51,7 @@ const ResetPassword = () => {
                             <div className="text-center mb-4">
                               <h5>Reset Password</h5>
                               <p className="text-white-50">
-                                Reset your password with Next-Gen.
+                                Reset your password with NEXGEN Staffing.
                               </p>
                             </div>
                             <Form className="auth-form text-white">

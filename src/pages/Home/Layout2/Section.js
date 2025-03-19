@@ -6,6 +6,7 @@ import CountryOptions from "../SubSection/CountryOptions";
 import JobSearch from "../SubSection/JobSearch";
 
 const section = () => {
+  // document.title = "Home | NEXGEN Staffing";
   return (
     <React.Fragment>
       <section className="bg-home2" id="home">
@@ -15,11 +16,13 @@ const section = () => {
               <div className="mb-0 pb-3 me-lg-5">
                 <h6 className="sub-title">Innovative IT & Staffing Solutions</h6>
                 <h1 className="display-5 fw-semibold mb-3">
-                  Elevate your career with{" "}
-                  <span className="text-primary fw-bold">Next-Gen</span>
-                </h1>
+                 <span className="text-primary fw-bold">NEXGEN STAFFING</span>
+                <h2>Your Trusted IT Staffing Partner in the US</h2>
+                       
+                </h1> 
+                
                 <p className="lead text-muted mb-0">
-                  Headquartered in the Chicago area, we provide cutting-edge IT services and staffing solutions tailored to your needs. Discover opportunities, streamline your job search, and exceed your career goals with our high-quality, client-focused approach.
+                At NEXGEN Staffing, we specialize in connecting businesses across the United States with top-tier IT talent. Whether you’re a startup looking to build a tech team from scratch or an established enterprise seeking skilled professionals for complex projects, our IT staffing solutions are designed to deliver results. Based in the US, we understand the dynamic needs of the tech industry and pride ourselves on being the go-to partner for companies aiming to hire IT candidates who drive innovation and success.
                 </p>
               </div>
               {/* <Form action="#">

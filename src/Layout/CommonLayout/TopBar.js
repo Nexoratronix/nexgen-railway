@@ -58,7 +58,7 @@ const TopBar = () => {
 
   return (
     <React.Fragment>
-      {/* <div className="top-bar" style={{ zIndex: 1030 }}>
+      <div className="top-bar" style={{ zIndex: 1030 }}>
         <Container fluid className="custom-container">
           <Row className="g-0 align-items-center">
             <Col md={7}>
@@ -68,7 +68,7 @@ const TopBar = () => {
                     {" "}
                     <i className="mdi mdi-map-marker"></i> Your Location:{" "}
                     <Link to="#" className="text-dark">
-                      New Caledonia
+                      USA
                     </Link>
                   </p>
                 </li>
@@ -97,7 +97,7 @@ const TopBar = () => {
                     <i className="uil uil-lock"></i>
                     Sign Up
                   </span>
-                  <Modal
+                  {/* <Modal
                     isOpen={modal}
                     toggle={openModal}
                     role="dialog"
@@ -117,7 +117,7 @@ const TopBar = () => {
                             <h5>Sign Up</h5>
                             <p className="text-muted">
                               Sign Up and get access to all the features of
-                              Next-Gen
+                              NEXGEN Staffing
                             </p>
                           </div>
                           <Form action="#" className="auth-form">
@@ -208,9 +208,9 @@ const TopBar = () => {
                         </div>
                       </div>
                     </ModalBody>
-                  </Modal>
+                  </Modal> */}
                 </li>
-                <li className="list-inline-item align-middle">
+                {/* <li className="list-inline-item align-middle">
                   <Dropdown
                     isOpen={dropdownOpen}
                     toggle={toggle}
@@ -263,12 +263,12 @@ const TopBar = () => {
                       </DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
-                </li>
+                </li> */}
               </ul>
             </Col>
           </Row>
         </Container>
-      </div> */}
+      </div>
     </React.Fragment>
   );
 };

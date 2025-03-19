@@ -44,7 +44,7 @@ const RightSideContent = () => {
   //     companyImg: jobImage1,
   //     jobDescription: "HTML Developer",
   //     experience: "0-2 Yrs Exp.",
-  //     companyName: "Next-Gen Technology Pvt.Ltd",
+  //     companyName: "NEXGEN Staffing Technology Pvt.Ltd",
   //     location: "California",
   //     salary: "$250 - $800 / month",
   //     fullTime: true,
@@ -87,7 +87,7 @@ const RightSideContent = () => {
   //     companyImg: jobImage3,
   //     jobDescription: "HTML Developer",
   //     experience: "2-4 Yrs Exp.",
-  //     companyName: "Next-Gen Technology Pvt.Ltd",
+  //     companyName: "NEXGEN Staffing Technology Pvt.Ltd",
   //     location: "California",
   //     salary: "$250 - $800 / month",
   //     freeLance: true,
@@ -106,7 +106,7 @@ const RightSideContent = () => {
   //     companyImg: jobImage4,
   //     jobDescription: "Java Developer",
   //     experience: "0-2 Yrs Exp.",
-  //     companyName: "Next-Gen Technology Pvt.Ltd",
+  //     companyName: "NEXGEN Staffing Technology Pvt.Ltd",
   //     location: "California",
   //     salary: "$450 - $800 / month",
   //     freeLance: true,
@@ -139,7 +139,7 @@ const RightSideContent = () => {
               <p className="text-muted">
                 {" "}
 
-                At Next-Gen, we’re more than just an IT firm—we’re your partner in building a smarter, stronger future. Based in the Chicago area, we deliver world-class IT staffing, managed services, and outsourcing solutions designed to meet the unique needs of businesses everywhere. Our team sources and deploys top-tier IT professionals—from software developers and cloud engineers to network architects and helpdesk experts—ensuring your projects thrive with the right talent at the right time.
+                At NEXGEN Staffing, we’re more than just an IT firm—we’re your partner in building a smarter, stronger future. Based in the Chicago area, we deliver world-class IT staffing, managed services, and outsourcing solutions designed to meet the unique needs of businesses everywhere. Our team sources and deploys top-tier IT professionals—from software developers and cloud engineers to network architects and helpdesk experts—ensuring your projects thrive with the right talent at the right time.
 
               </p>
 

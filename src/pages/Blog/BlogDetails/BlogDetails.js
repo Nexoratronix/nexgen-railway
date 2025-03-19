@@ -15,7 +15,7 @@ import BlogForm from "../BlogDetails/BlogForm";
 import BlogPost from "../BlogDetails/BlogPost";
 
 const BlogDetails = () => {
-  document.title = "Blog Details | Next-Gen - Job Listing Template | Themesdesign";
+  document.title = "Blog Details | NEXGEN Staffing - Job Listing Template | Themesdesign";
 
   return (
     <React.Fragment>

@@ -49,7 +49,7 @@ const Testimonial = () => {
           <Row className="justify-content-center">
             <Col lg={6}>
               <div className="section-title text-center mb-4 pb-2">
-                <h3 className="title mb-3">Satisfied Clients</h3>
+                <h3 className="title mb-3 myheading">Satisfied Clients</h3>
                 <p className="text-muted">
                   Discover how our IT solutions—staffing, software, and support—drive success for businesses like yours.
                 </p>

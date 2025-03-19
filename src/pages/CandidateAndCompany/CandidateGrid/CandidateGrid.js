@@ -7,7 +7,7 @@ import Pagination from "../../Jobs/JobList2/Pagination";
 
 const HireCandidate = () => {
   document.title =
-    "Hire Candidate | Next-Gen";
+    "Hire Candidate | NEXGEN Staffing";
   return (
     <React.Fragment>
       <Section />

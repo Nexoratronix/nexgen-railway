@@ -23,7 +23,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage1,
       jobDescription: "Magento Developer",
       experience: "Min. 1 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Developer",
       salary: "$500/ Month",
       jobTimeDate: "2 min ago",
@@ -36,7 +36,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage2,
       jobDescription: "Marketing Director",
       experience: "Min. 3 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Director",
       salary: "$850/ Month",
       jobTimeDate: "15 days ago",
@@ -49,7 +49,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage3,
       jobDescription: "Magento Developer",
       experience: "0-1 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Developer",
       salary: "$780/ Month",
       jobTimeDate: "2 hrs ago",
@@ -62,7 +62,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage4,
       jobDescription: "Project Leader",
       experience: "2 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Developer",
       salary: "$900/ Month",
       jobTimeDate: "30 min ago",
@@ -75,7 +75,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage5,
       jobDescription: "Graphic Designer",
       experience: "0.6 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Designer",
       salary: "$350/ Month",
       jobTimeDate: "2 days ago",
@@ -88,7 +88,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage6,
       jobDescription: "Store Manager",
       experience: "Min. 1.5 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Manager",
       salary: "$950/ Month",
       jobTimeDate: "2 days ago",
@@ -101,7 +101,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage7,
       jobDescription: "Product Designer",
       experience: "Min. 1 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Developer",
       salary: "$750/ Month",
       jobTimeDate: "1 hrs ago",
@@ -114,7 +114,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage8,
       jobDescription: "Business Associate",
       experience: "Min. 1 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Developer",
       salary: "$780/ Month",
       jobTimeDate: "2 days ago",
@@ -127,7 +127,7 @@ const JobVacancy2 = () => {
       companyImg: jobImage9,
       jobDescription: "Product Sales Specialist",
       experience: "Min. 1 Year",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       jobType: "Developer",
       salary: "$780/ Month",
       jobTimeDate: "2 days ago",
@@ -138,6 +138,26 @@ const JobVacancy2 = () => {
   ];
   return (
     <React.Fragment>
+
+      <section className="job-section py-5">
+        <div className="container text-center">
+          <h2 className="myheading">IT Job Opportunities with <span className="text-primary">NEXGEN Staffing</span></h2>
+          <p className="mt-4 text-secondary fs-5">
+            Are you an IT professional looking for your next big opportunity in the US? At
+            <span className="text-warning fw-bold"> NEXGEN Staffing</span>, we’re passionate about connecting talented individuals like you with rewarding IT jobs across the United States.
+          </p>
+
+          <p className="text-secondary fs-6">
+            As a leading IT staffing agency, we partner with top companies to offer a wide range of career opportunities, from{" "}
+            <span className="fw-semibold">software development</span> to{" "}
+            <span className="fw-semibold">cybersecurity</span>,
+            <span className="fw-semibold">cloud engineering</span> to{" "}
+            <span className="fw-semibold">data analysis</span>.
+            Explore our current openings and take the next step in your tech career today.
+          </p>
+          {/* <button className="btn btn-primary mt-3">Explore Jobs</button> */}
+        </div>
+      </section>
       {jobVacancy2.map((jobVacancy2Details, key) => (
         <Col lg={4} md={6} className="mt-4" key={key}>
           <div

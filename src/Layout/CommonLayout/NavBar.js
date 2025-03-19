@@ -355,7 +355,7 @@ const NavBar = (props) => {
                 </Link>
               </NavItem>
 
-              {/* <NavItem className="dropdown dropdown-hover">
+              <NavItem className="dropdown dropdown-hover">
                 <NavLink
                   to="/#"
                   id="productdropdown"
@@ -372,26 +372,26 @@ const NavBar = (props) => {
                   aria-labelledby="productdropdown"
                 >
 
-                  <li>
+                  {/* <li>
                     <Link className="dropdown-item" to="/blogmodern">
                       Blog
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link className="dropdown-item" to="/jobgrid2">
                       Opportunity
                     </Link>
 
                   </li>
-                  <Link className="dropdown-item" to="/jobscategories">
+                  {/* <Link className="dropdown-item" to="/jobscategories">
                     Jobs Categories
-                  </Link>
+                  </Link> */}
 
-                  <Link className="dropdown-item" to="/HireCandidate">
+                  {/* <Link className="dropdown-item" to="/HireCandidate">
                     Hire Candidate
-                  </Link>
+                  </Link> */}
                 </ul>
-              </NavItem> */}
+              </NavItem>
             </ul>
           </Collapse>
 

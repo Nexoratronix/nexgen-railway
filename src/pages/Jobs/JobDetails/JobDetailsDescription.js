@@ -118,7 +118,7 @@ const JobDetailsDescription = () => {
                   commercial activities.
                 </li>
                 <li>
-                  <i className="uil uil-circle"></i> Build next-generation web
+                  <i className="uil uil-circle"></i> Build NEXGEN Staffingeration web
                   applications with a focus on the client side
                 </li>
                 <li>

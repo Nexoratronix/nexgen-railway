@@ -14,6 +14,7 @@ import classnames from "classnames";
 import processImage1 from "../../assets/images/process-01.png";
 import processImage2 from "../../assets/images/process-02.png";
 import processImage3 from "../../assets/images/process-03.png";
+import support from "../../assets/images/support.webp";
 
 const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState("1");
@@ -28,7 +29,7 @@ const HowItWorks = () => {
           <Row className="align-items-center">
             <Col lg={6}>
               <div className="section-title me-5">
-                <h3 className="title">How It Works</h3>
+                <h3 className="title myheading">How It Works</h3>
                 <p className="text-muted">
                   Start with a simple registration, then let us deliver tailored IT staffing and solutions for your success.
                 </p>
@@ -44,9 +45,9 @@ const HowItWorks = () => {
                     <div className="d-flex">
                       <div className="number flex-shrink-0">1</div>
                       <div className="flex-grow-1 text-start ms-3">
-                        <h5 className="fs-18">Register an Account</h5>
+                        <h5 className="fs-18">Tell Us Your Needs</h5>
                         <p className="text-muted mb-0">
-                          Sign up easily to access our full range of IT staffing and service solutions tailored to your business.
+                          We start by understanding your business goals, technical requirements, and team dynamics.
                         </p>
                       </div>
                     </div>
@@ -63,9 +64,9 @@ const HowItWorks = () => {
                     <div className="d-flex">
                       <div className="number flex-shrink-0">2</div>
                       <div className="flex-grow-1 text-start ms-3">
-                        <h5 className="fs-18">Tell Us Your Needs</h5>
+                        <h5 className="fs-18">We Match the Talent</h5>
                         <p className="text-muted mb-0">
-                          Share your project details or IT staffing requirements, and we’ll craft a plan just for you.
+                          Using our extensive network and advanced tools, we identify IT professionals who match your criteria.
                         </p>
                       </div>
                     </div>
@@ -82,9 +83,9 @@ const HowItWorks = () => {
                     <div className="d-flex">
                       <div className="number flex-shrink-0">3</div>
                       <div className="flex-grow-1 text-start ms-3">
-                        <h5 className="fs-18">We Match the Talent</h5>
+                        <h5 className="fs-18">Launch with Confidence</h5>
                         <p className="text-muted mb-0">
-                          We quickly connect you with skilled IT professionals or custom solutions to meet your goals.
+                          Enjoy seamless onboarding and ongoing support as your IT projects or staffing needs take off.
                         </p>
                       </div>
                     </div>
@@ -101,9 +102,9 @@ const HowItWorks = () => {
                     <div className="d-flex">
                       <div className="number flex-shrink-0">4</div>
                       <div className="flex-grow-1 text-start ms-3">
-                        <h5 className="fs-18">Launch with Confidence</h5>
+                        <h5 className="fs-18">Support</h5>
                         <p className="text-muted mb-0">
-                          Enjoy seamless onboarding and ongoing support as your IT projects or staffing needs take off.
+                          Post-placement, we follow up to ensure satisfaction for both you and the candidate.
                         </p>
                       </div>
                     </div>
@@ -114,16 +115,16 @@ const HowItWorks = () => {
             <Col lg={6}>
               <TabContent activeTab={activeTab}>
                 <TabPane tabId="1">
-                  <img src={processImage1} alt="Register an Account" className="img-fluid" />
+                  <img src={processImage1} alt="Tell Us Your Needs" className="img-fluid" />
                 </TabPane>
                 <TabPane tabId="2">
-                  <img src={processImage2} alt="Tell Us Your Needs" className="img-fluid" />
+                  <img src={processImage2} alt="We Match the Talent" className="img-fluid" />
                 </TabPane>
                 <TabPane tabId="3">
-                  <img src={processImage3} alt="We Match the Talent" className="img-fluid" />
+                  <img src={processImage3} alt="Launch with Confidence" className="img-fluid" />
                 </TabPane>
                 <TabPane tabId="4">
-                  <img src={processImage1} alt="Launch with Confidence" className="img-fluid" />
+                  <img src={support} alt="Support" className="img-fluid" />
                 </TabPane>
               </TabContent>
             </Col>

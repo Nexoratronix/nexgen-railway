@@ -10,7 +10,7 @@ import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
-  document.title = "Sign In | Next-Gen - Job Listing Template | Themesdesign";
+  document.title = "Sign In | NEXGEN Staffing - Job Listing Template | Themesdesign";
   return (
     <React.Fragment>
       <div>
@@ -51,7 +51,7 @@ const SignIn = () => {
                               <div className="text-center mb-4">
                                 <h5>Welcome Back !</h5>
                                 <p className="text-white-70">
-                                  Sign in to continue to Next-Gen.
+                                  Sign in to continue to NEXGEN Staffing.
                                 </p>
                               </div>
                               <Form action="/" className="auth-form">

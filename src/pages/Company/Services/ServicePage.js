@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Card, CardBody } from "reactstrap";
-import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 
 const ServicePage = () => {
@@ -15,14 +14,14 @@ const ServicePage = () => {
     {
       id: 2,
       serviceIcon: "uim-telegram-alt",
-      serviceName: "Custom Software Development",
+      serviceName: "Temporary IT Staffing",
       serviceText:
-        "Our expert teams craft tailored software solutions, from mobile apps to enterprise systems, ensuring quality and innovation at every step."
+        "Need IT professionals for a short-term project? Our temporary staffing solutions connect you with skilled candidates for contract-based roles."
     },
     {
       id: 3,
       serviceIcon: "uim-airplay",
-      serviceName: "Managed IT Services",
+      serviceName: "Permanent IT Recruitment",
       serviceText:
         "Keep your systems running smoothly with our comprehensive managed services, covering helpdesk, network management, and more."
     },
@@ -43,9 +42,9 @@ const ServicePage = () => {
     {
       id: 6,
       serviceIcon: "uim-bookmark",
-      serviceName: "Project Management",
+      serviceName: "Managed IT Staffing",
       serviceText:
-        "Track and manage your IT projects with our expert oversight, ensuring timely delivery and alignment with your goals."
+        "Let us handle the entire recruitment process for you. Our managed staffing service takes the burden off your shoulders."
     },
     {
       id: 7,
@@ -69,44 +68,38 @@ const ServicePage = () => {
         "Gain actionable insights with our real-time monitoring and reporting, helping you optimize systems and reduce risks."
     }
   ];
+
   return (
-    <React.Fragment>
+    <>
+      {/* Service Section */}
       <section className="section">
         <Container>
           <Row className="justify-content-center">
-            <Col lg={6}>
-              <div className="section-title text-center">
+            <Col lg={6} md={8} sm={12} className="text-center">
+              <div className="section-title">
                 <h3 className="title mb-3">
-                  Providing our trusted{" "}
-                  <span className="text-warning">Services</span>
+                  IT Staffing Services Tailored for Your <span className="text-warning">Success</span>
                 </h3>
                 <p className="text-muted">
-                  From IT staffing to managed services and outsourcing, we deliver tailored, high-quality solutions to empower your business with efficiency and innovation.
+                  At <span className="text-warning fw-semibold">NEXGEN Staffing</span>, we provide tailored IT staffing solutions across the U.S.
+                  Our customizable services ensure you find the right tech talent to fit your needs, timeline, and budget.
                 </p>
               </div>
             </Col>
           </Row>
+
+          {/* Grid System for Services */}
           <Row>
-            {servicePage.map((servicePageDetails, key) => (
-              <Col lg={4} md={6} key={key}>
-                <Card className="service-box mt-4 border-0">
+            {servicePage.map((service, index) => (
+              <Col lg={4} md={6} sm={12} key={index} className="mb-4">
+                <Card className="service-box border-0 shadow-sm">
                   <CardBody className="p-4">
                     <div className="service-icon icons-md">
-                      <Icon
-                        icon={servicePageDetails.serviceIcon}
-                        color="#766df4"
-                      />
+                      <Icon icon={service.serviceIcon} color="#766df4" />
                     </div>
                     <div className="mt-4">
-                      <h5>{servicePageDetails.serviceName}</h5>
-                      <p className="text-muted">
-                        {servicePageDetails.serviceText}
-                      </p>
-                    </div>
-                    <div className="learn-more">
-                      {/* <Link to="#" className="form-text text-primary">
-                        Learn More <i className="uil uil-angle-right-b"></i>
-                      </Link> */}
+                      <h5>{service.serviceName}</h5>
+                      <p className="text-muted">{service.serviceText}</p>
                     </div>
                   </CardBody>
                 </Card>
@@ -115,7 +108,30 @@ const ServicePage = () => {
           </Row>
         </Container>
       </section>
-    </React.Fragment>
+
+      {/* The NEXGEN Difference Section */}
+      <section className="section bg-light">
+        <Container>
+          <Row className="justify-content-center">
+            <Col lg={8} md={10} sm={12} className="text-center">
+              <h3 className="title mb-3 myheading">The NEXGEN Difference</h3>
+              <p>What sets us apart? Quality, speed, and precision. Here’s how we ensure you get the best tech talent:</p>
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col lg={8} md={10} sm={12}>
+              <ul className="text-start">
+                <li><strong>Advanced Screening:</strong> Technical assessments and behavioral interviews to verify skills.</li>
+                <li><strong>Industry Expertise:</strong> Our recruiters have deep IT knowledge of the US tech landscape.</li>
+                <li><strong>Scalable Solutions:</strong> Whether you need one hire or a full team, we scale accordingly.</li>
+                <li><strong>Ongoing Support:</strong> We provide follow-up support for long-term success.</li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+    </>
   );
 };
 

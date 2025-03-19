@@ -65,7 +65,7 @@ const RecentJobs = () => {
       id: 3,
       companyImg: jobImage3,
       jobDescription: "Digital Marketing Manager",
-      companyName: "Next-Gen Technology Pvt.Ltd",
+      companyName: "NEXGEN Staffing Technology Pvt.Ltd",
       location: "Phoenix, Arizona",
       salary: "1500-2400/m",
       freelancer: true,
