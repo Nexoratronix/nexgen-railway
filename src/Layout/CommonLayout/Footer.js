@@ -106,7 +106,7 @@ const Footer = () => {
                       <li className="text-white">
                         <i className="mdi mdi-map-marker"></i>{" "}
                         <a
-                          href="https://www.google.com/maps/search/?api=1&query=23704+100th+Ave+SE+Suite+A+104,+Kent,+WA+98031"
+                          href="https://www.google.com/maps/search/?api=1&query=23704+100th+Ave+SE+Suite+A+104+Kent+WA+98031"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-white text-decoration-none"
@@ -143,7 +143,7 @@ const Footer = () => {
               <p className="text-white-50 text-center mb-0">
                 {new Date().getFullYear()} © NEXGEN Staffing. All Rights Reserved.
                 <Link
-                  to="///"
+                  to="/jobgrid2"
                   target="_blank"
                   className="text-reset text-decoration-underline ms-1"
                 >

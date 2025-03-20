@@ -22,7 +22,7 @@ const Testimonial = () => {
       content:
         "Their team provided us with top-notch developers in record time. Clear communication, precise milestones, and a seamless integration into our workflow made all the difference.",
       name: "Michael Reynolds",
-      occupation: "IT Director",
+      // occupation: "IT Director",
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const Testimonial = () => {
       content:
         "The cloud migration was flawless—fast, secure, and tailored to our needs. Their expertise in AWS saved us time and resources while boosting performance.",
       name: "Sarah Thompson",
-      occupation: "Operations Manager",
+      // occupation: "Operations Manager",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ const Testimonial = () => {
       content:
         "Their 24/7 support team resolved a critical issue in minutes, keeping our systems online during a peak period. Professional, patient, and reliable every step of the way.",
       name: "David Patel",
-      occupation: "Business Owner",
+      // occupation: "Business Owner",
     },
   ];
 
