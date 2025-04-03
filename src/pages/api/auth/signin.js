@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../../lib/db";
+import { connectToDatabase } from "../db";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { nanoid } from "nanoid";

@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import { sendOTP } from "@/lib/email";
 
 export default async function handler(req, res) {

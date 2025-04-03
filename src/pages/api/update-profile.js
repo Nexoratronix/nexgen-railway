@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import jwt from "jsonwebtoken";
 
 export default async function handler(req, res) {

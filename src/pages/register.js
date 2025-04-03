@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from "reactstrap";
 import { useRouter } from "next/router";
-import { connectToDatabase } from "../lib/db";
+import { connectToDatabase } from "./api/db";
 import { sendOTP } from "../lib/email";
 import bcrypt from "bcryptjs";
 

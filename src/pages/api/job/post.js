@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import { authMiddleware } from "@/middleware/auth";
 
 const handler = async (req, res) => {

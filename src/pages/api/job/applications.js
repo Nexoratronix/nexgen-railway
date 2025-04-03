@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 
 // Retry logic for MongoDB connection
 async function connectWithRetry(maxRetries = 3, retryDelay = 2000) {

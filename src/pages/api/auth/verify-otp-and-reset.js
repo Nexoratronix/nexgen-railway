@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import bcrypt from "bcryptjs";
 
 // Simple in-memory rate limiter

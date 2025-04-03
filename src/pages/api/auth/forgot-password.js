@@ -62,7 +62,7 @@
 //     res.status(500).json({ message: "Internal server error", error: error.message });
 //   }
 // }
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import { sendPasswordResetEmail } from "@/lib/email";
 
 // Simple in-memory rate limiter

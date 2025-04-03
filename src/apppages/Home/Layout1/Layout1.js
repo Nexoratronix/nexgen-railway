@@ -3,7 +3,7 @@ const Section = React.lazy(() => import('../Layout1/Section'));
 const Home = React.lazy(() => import('../Home'));
 
 const Layout1 = () => {
-  document.title = "NEXGEN Staffing";
+  // document.title = "NEXGEN Staffing";
   return (
     <div>
       <Section />

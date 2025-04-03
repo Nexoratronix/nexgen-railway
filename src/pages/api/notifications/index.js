@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import { authMiddleware } from "@/middleware/auth";
 import { ObjectId } from "mongodb";
 import { createClient } from "redis";

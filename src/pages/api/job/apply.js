@@ -147,7 +147,7 @@
 // }
 
 // export default authMiddleware(handler);
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import formidable from "formidable";
 import fs from "fs/promises";
 import path from "path";

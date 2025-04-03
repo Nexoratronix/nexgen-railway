@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../../lib/db";
+import { connectToDatabase } from "../db";
 import { serialize } from "cookie";
 import { ObjectId } from "mongodb";
 

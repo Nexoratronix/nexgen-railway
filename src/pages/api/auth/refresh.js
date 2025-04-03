@@ -1,5 +1,5 @@
 
-import { connectToDatabase } from "../../../lib/db";
+import { connectToDatabase } from "../db";
 import jwt from "jsonwebtoken";
 import { serialize } from "cookie";
 import { ObjectId } from "mongodb";

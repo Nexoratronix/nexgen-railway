@@ -26,7 +26,7 @@
 //     res.status(500).json({ message: "Failed to verify OTP", error: error.message });
 //   }
 // }
-import { connectToDatabase } from "../../../lib/db";
+import { connectToDatabase } from "../db";
 
 // Retry logic for MongoDB connection
 async function connectWithRetry(maxRetries = 3, retryDelay = 2000) {

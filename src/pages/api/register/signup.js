@@ -1,6 +1,6 @@
 
 
-import { connectToDatabase } from "@/lib/db";
+import { connectToDatabase } from "@/pages/api/db";
 import bcrypt from "bcryptjs";
 
 export default async function handler(req, res) {
