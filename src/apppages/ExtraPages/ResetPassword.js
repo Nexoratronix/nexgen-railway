@@ -296,7 +296,7 @@ const ResetPassword = () => {
                                   href="/signin"
                                   className="fw-medium text-white text-decoration-underline"
                                 >
-                                  Login
+                                  Signin
                                 </Link>
                               </p>
                             </div>

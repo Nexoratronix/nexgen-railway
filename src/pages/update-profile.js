@@ -114,16 +114,16 @@ const UpdateProfile = () => {
                             </label>
                             <Input
                               type="select"
-                              className="form-control"
+                              className="form-control text-white "
                               id="roleInput"
                               required
                               value={newRole}
                               onChange={(e) => setNewRole(e.target.value)}
                             >
-                              <option value="">Select a role</option>
-                              <option value="user">User</option>
-                              <option value="admin">Admin</option>
-                              <option value="superadmin">Superadmin</option>
+                              <option className="bg-primary" value="">Select a role</option>
+                              <option className="bg-primary" value="user">User</option>
+                              <option className="bg-primary" value="admin">Admin</option>
+                              <option className="bg-primary" value="superadmin">Superadmin</option>
                             </Input>
                           </div>
                           <div className="text-center">

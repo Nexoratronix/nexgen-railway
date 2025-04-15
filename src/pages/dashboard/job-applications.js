@@ -1,258 +1,319 @@
+
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, CardBody, Table, FormGroup, Label, Input, Button } from "reactstrap";
-import { useRouter } from "next/router";
+import { Col, Modal, ModalBody, Input, Label } from "reactstrap";
+import Link from "next/link";
+import useLoadingStore from "@/store/loading";
+import { Spinner } from "reactstrap";
 
-const JobApplications = () => {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAuthorized, setIsAuthorized] = useState(false);
-  const [jobApplications, setJobApplications] = useState([]);
-  const [filteredApplications, setFilteredApplications] = useState([]);
-  const [filters, setFilters] = useState({
-    date: "",
-    category: "",
-    workingHours: "",
-  });
-  const [error, setError] = useState(""); // Added for error handling
+const jobIcons = [
+  "/job-icons/developer1.png",
+  "/job-icons/developer2.png",
+  "/job-icons/developer3.png",
+];
 
-  // Check if the user is a Superadmin or Admin
+const getRandomIcon = () => {
+  const randomIndex = Math.floor(Math.random() * jobIcons.length);
+  return jobIcons[randomIndex];
+};
+
+const JobVacancy2 = () => {
+  const [modal, setModal] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null); // Store full job object
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+  const { isLoading, setLoading } = useLoadingStore();
+  const [jobs, setJobs] = useState([]);
+  const [fetchError, setFetchError] = useState("");
+
   useEffect(() => {
-    const checkRole = async () => {
+    const fetchJobs = async () => {
       try {
-        const response = await fetch("/api/check-role", {
-          method: "GET",
-          credentials: "include",
-        });
+        const response = await fetch("/api/job/fetch");
         const data = await response.json();
-        if (response.ok && (data.role === "superadmin" || data.role === "admin")) {
-          setIsAuthorized(true);
+        if (response.ok) {
+          const jobsWithIcons = data.map((job) => ({
+            ...job,
+            icon: getRandomIcon(),
+          }));
+          setJobs(jobsWithIcons);
         } else {
-          router.push(`/signin?callbackUrl=${encodeURIComponent("/dashboard/superadmin/job-applications")}`);
+          setFetchError(data.message || "Failed to fetch jobs.");
         }
-        setIsAuthorized(true);
-      } catch (error) {
-        console.error("Error checking role:", error);
-        router.push(`/signin?callbackUrl=${encodeURIComponent("/dashboard/superadmin/job-applications")}`);
-      } finally {
-        setIsLoading(false);
+      } catch (err) {
+        setFetchError("Failed to fetch jobs. Please try again.");
       }
     };
-    checkRole();
-  }, [router]);
+    fetchJobs();
+  }, []);
 
-  // Fetch job applications from the database
-  useEffect(() => {
-    if (isAuthorized) {
-      const fetchJobApplications = async () => {
-        try {
-          const response = await fetch("/api/job/applications", {
-            method: "GET",
-            credentials: "include",
-          });
-          const data = await response.json();
-          if (response.ok) {
-            console.log("Frontend received applications:", data.applications);
-            setJobApplications(data.applications);
-            setFilteredApplications(data.applications);
-          } else {
-            console.error("Failed to fetch job applications:", data.message);
-            setError(data.message);
-          }
-        } catch (error) {
-          console.error("Error fetching job applications:", error);
-          setError("Failed to fetch job applications. Please try again.");
-        }
-      };
-      fetchJobApplications();
-    }
-  }, [isAuthorized]);
-
-  // Handle filter changes
-  const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters((prev) => ({ ...prev, [name]: value }));
+  const openModal = (job) => {
+    setSelectedJob(job); // Store the full job object
+    setModal(true);
+    setMessage("");
+    setError("");
   };
 
-  // Apply filters to the job applications
-  useEffect(() => {
-    let filtered = [...jobApplications];
+  const closeModal = () => {
+    setModal(false);
+    setSelectedJob(null);
+    setMessage("");
+    setError("");
+  };
 
-    if (filters.date) {
-      const selectedDate = new Date(filters.date);
-      filtered = filtered.filter((app) => {
-        const appDate = new Date(app.createdAt); // Updated to match database field
-        return (
-          appDate.getFullYear() === selectedDate.getFullYear() &&
-          appDate.getMonth() === selectedDate.getMonth() &&
-          appDate.getDate() === selectedDate.getDate()
-        );
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessage("");
+    setError("");
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    formData.append("jobId", selectedJob.jobId); // Use the custom jobId
+
+    try {
+      const response = await fetch("/api/job/apply", {
+        method: "POST",
+        body: formData,
+        credentials: "include",
       });
+
+      const data = await response.json();
+      if (response.ok) {
+        setMessage(data.message);
+        setTimeout(() => {
+          closeModal();
+        }, 2000);
+      } else {
+        setError(data.message);
+      }
+    } catch (err) {
+      setError("Failed to submit application. Please try again.");
+    } finally {
+      setLoading(false);
     }
-
-    if (filters.category) {
-      filtered = filtered.filter((app) => (app.category || "N/A") === filters.category);
-    }
-
-    if (filters.workingHours) {
-      filtered = filtered.filter((app) => (app.workingHours || "N/A") === filters.workingHours);
-    }
-
-    setFilteredApplications(filtered);
-  }, [filters, jobApplications]);
-
-  if (isLoading) {
-    return (
-      <div className="d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
-        <p>Loading...</p>
-      </div>
-    );
-  }
-
-  if (!isAuthorized) {
-    return null;
-  }
+  };
 
   return (
     <React.Fragment>
-      <section className="page-title-box">
-        <Container>
-          <div className="row justify-content-center">
-            <Col md={6}>
-              <div className="text-center text-white">
-                <h3 className="mb-4">Job Applications</h3>
+      <section className="job-section py-5">
+        <div className="container text-center">
+          <h2 className="myheading">
+            IT Job Opportunities with{" "}
+            <span className="text-primary">NEXGEN Staffing</span>
+          </h2>
+          <p className="mt-4 text-secondary fs-5">
+            Are you an IT professional looking for your next big opportunity in
+            the US? At{" "}
+            <span className="text-warning fw-bold">NEXGEN Staffing</span>, we’re
+            passionate about connecting talented individuals like you with
+            rewarding IT jobs across the United States.
+          </p>
+          <p className="text-secondary fs-6">
+            As a leading IT staffing agency, we partner with top companies to
+            offer a wide range of career opportunities, from{" "}
+            <span className="fw-semibold">software development</span> to{" "}
+            <span className="fw-semibold">cybersecurity</span>,{" "}
+            <span className="fw-semibold">cloud engineering</span> to{" "}
+            <span className="fw-semibold">data analysis</span>. Explore our
+            current openings and take the next step in your tech career today.
+          </p>
+        </div>
+      </section>
+      <div className="container">
+        {fetchError && <p className="text-danger text-center">{fetchError}</p>}
+        {jobs.length === 0 && !fetchError && <p className="text-center">No jobs available.</p>}
+        <div className="row">
+          {jobs.map((jobVacancy2Details, key) => (
+            <Col lg={4} md={6} className="mt-4" key={key}>
+              <div
+                className={
+                  jobVacancy2Details.addclassNameBookmark === true
+                    ? "card job-grid-box bookmark-post"
+                    : "card job-grid-box"
+                }
+              >
+                <div className="card-body p-4">
+                  <div className="favorite-icon">
+                    <Link href="#">
+                      <i className="uil uil-heart-alt"></i>
+                    </Link>
+                  </div>
+                  <div>
+                    <Link href="/companydetails">
+                      <img
+                        src={jobVacancy2Details.icon}
+                        alt="Job Icon"
+                        className="img-fluid rounded-3"
+                        style={{ width: "64px", height: "64px" }}
+                      />
+                    </Link>
+                  </div>
+                  <div className="mt-4">
+                    <Link href="/jobdetails" className="primary-link">
+                      <h5 className="fs-17 mb-1">
+                        {jobVacancy2Details.jobDescription}
+                      </h5>
+                    </Link>
+                    <p className="text-muted">{jobVacancy2Details.companyName}</p>
+                    <p className="text-muted">Job ID: {jobVacancy2Details.jobId}</p>
+                    <ul className="list-inline">
+                      <li className="list-inline-item">
+                        <span className="badge bg-success-subtle text-success fs-13 mt-1">
+                          {jobVacancy2Details.salary}
+                        </span>
+                      </li>
+                      <li className="list-inline-item">
+                        <span className="badge bg-primary-subtle text-primary fs-13 mt-1">
+                          {jobVacancy2Details.experience}
+                        </span>
+                      </li>
+                      <li className="list-inline-item">
+                        <span className="badge bg-info-subtle text-info fs-13 mt-1">
+                          {jobVacancy2Details.jobType}
+                        </span>
+                      </li>
+                      <li className="list-inline-item">
+                        <span className="badge bg-warning-subtle text-warning fs-13 mt-1">
+                          Openings: {jobVacancy2Details.numberOfOpenings}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="job-grid-content mt-3">
+                    <p className="text-muted">{jobVacancy2Details.jobDetails}</p>
+                    <div className="d-flex align-items-center justify-content-between mt-4 border-top pt-3">
+                      <p className="text-muted float-start mb-0">
+                        {new Date(jobVacancy2Details.jobTimeDate).toLocaleString()}
+                      </p>
+                      <div className="text-end">
+                        <button
+                          onClick={() => openModal(jobVacancy2Details)}
+                          className="btn btn-sm btn-primary"
+                        >
+                          Apply Now <i className="uil uil-angle-right-b"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Col>
-          </div>
-        </Container>
-      </section>
-      <div className="position-relative" style={{ zIndex: 1 }}>
-        <div className="shape">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250">
-            <path
-              fill="#FFFFFF"
-              fillOpacity="1"
-              d="M0,192L120,202.7C240,213,480,235,720,234.7C960,235,1200,213,1320,202.7L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-            ></path>
-          </svg>
+          ))}
         </div>
       </div>
-      <div className="main-content mt-4">
-        <div className="page-content">
-          <section>
-            <Container>
-              <Row className="justify-content-center">
-                <Col xl={10} lg={12}>
-                  <Card>
-                    <CardBody className="p-5">
-                      <h5 className="mb-4">Job Applications</h5>
-                      {error && (
-                        <div className="alert alert-danger text-center mb-4" role="alert">
-                          {error}
-                        </div>
-                      )}
-                      {/* Filters */}
-                      <Row className="mb-4">
-                        <Col md={4}>
-                          <FormGroup>
-                            <Label for="date">Filter by Date</Label>
-                            <Input
-                              type="date"
-                              name="date"
-                              id="date"
-                              value={filters.date}
-                              onChange={handleFilterChange}
-                            />
-                          </FormGroup>
-                        </Col>
-                        <Col md={4}>
-                          <FormGroup>
-                            <Label for="category">Filter by Category</Label>
-                            <Input
-                              type="select"
-                              name="category"
-                              id="category"
-                              value={filters.category}
-                              onChange={handleFilterChange}
-                            >
-                              <option value="">All Categories</option>
-                              <option value="N/A">N/A</option>
-                              <option value="IT">IT</option>
-                              <option value="Marketing">Marketing</option>
-                              <option value="Finance">Finance</option>
-                              <option value="HR">HR</option>
-                            </Input>
-                          </FormGroup>
-                        </Col>
-                        <Col md={4}>
-                          <FormGroup>
-                            <Label for="workingHours">Filter by Working Hours</Label>
-                            <Input
-                              type="select"
-                              name="workingHours"
-                              id="workingHours"
-                              value={filters.workingHours}
-                              onChange={handleFilterChange}
-                            >
-                              <option value="">All Working Hours</option>
-                              <option value="N/A">N/A</option>
-                              <option value="Full-Time">Full-Time</option>
-                              <option value="Part-Time">Part-Time</option>
-                              <option value="Contract">Contract</option>
-                            </Input>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                      {/* Job Applications Table */}
-                      <Table responsive bordered>
-                        <thead>
-                          <tr>
-                            <th>#</th>
-                            <th>Applicant Name</th>
-                            <th>Applicant Email</th>
-                            <th>Job ID</th>
-                            <th>Message</th>
-                            <th>Resume</th>
-                            <th>Applied Date</th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {filteredApplications.length > 0 ? (
-                            filteredApplications.map((app, index) => (
-                              <tr key={app._id}>
-                                <td>{index + 1}</td>
-                                <td>{app.name}</td>
-                                <td>{app.email}</td>
-                                <td>{app.jobId}</td>
-                                <td>{app.message}</td>
-                                <td>
-                                  <a href={app.resumePath} target="_blank" rel="noopener noreferrer">
-                                    Download Resume
-                                  </a>
-                                </td>
-                                <td>{new Date(app.createdAt).toLocaleDateString()}</td>
-                                <td>{app.status || "Pending"}</td>
-                              </tr>
-                            ))
-                          ) : (
-                            <tr>
-                              <td colSpan="8" className="text-center">
-                                No job applications found.
-                              </td>
-                            </tr>
-                          )}
-                        </tbody>
-                      </Table>
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-          </section>
+      <div
+        className="modal fade"
+        id="applyNow"
+        tabIndex="-1"
+        aria-labelledby="applyNow"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <Modal isOpen={modal} toggle={closeModal} centered>
+            <ModalBody className="modal-body p-5">
+              <div className="text-center mb-4">
+                <h5 className="modal-title" id="staticBackdropLabel">
+                  Apply For This Job
+                </h5>
+              </div>
+              <div className="position-absolute end-0 top-0 p-3">
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                className={`message-container ${message || error ? "show" : "hide"}`}
+                style={{ marginBottom: "1rem" }}
+              >
+                {message && (
+                  <p className="text-success text-center">{message}</p>
+                )}
+                {error && <p className="text-danger text-center">{error}</p>}
+              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <Label for="jobIdControlInput" className="form-label">
+                    Job ID
+                  </Label>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    id="jobIdControlInput"
+                    name="jobId"
+                    value={selectedJob?.jobId || ""}
+                    readOnly // Makes it unchangeable
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <Label for="nameControlInput" className="form-label">
+                    Name
+                  </Label>
+                  <Input
+                    type="text"
+                    className="form-control"
+                    id="nameControlInput"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <Label for="emailControlInput2" className="form-label">
+                    Email Address
+                  </Label>
+                  <Input
+                    type="email"
+                    className="form-control"
+                    id="emailControlInput2"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div className="mb-3">
+                  <Label for="messageControlTextarea" className="form-label">
+                    Message
+                  </Label>
+                  <textarea
+                    className="form-control"
+                    id="messageControlTextarea"
+                    name="message"
+                    rows="4"
+                    placeholder="Enter your message"
+                    required
+                  ></textarea>
+                </div>
+                <div className="mb-4">
+                  <Label className="form-label" for="inputGroupFile01">
+                    Resume Upload
+                  </Label>
+                  <Input
+                    type="file"
+                    className="form-control"
+                    id="inputGroupFile01"
+                    name="resume"
+                    accept=".pdf,.doc,.docx, image/*"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="btn btn-primary w-100"
+                  disabled={isLoading}
+                >
+                  {isLoading ? <Spinner size="sm" /> : "Send Application"}
+                </button>
+              </form>
+            </ModalBody>
+          </Modal>
         </div>
       </div>
     </React.Fragment>
   );
 };
 
-export default JobApplications;
+export default JobVacancy2;

@@ -27,28 +27,36 @@ const SignUp = () => {
   const otpRefs = useRef([]);
   const { isLoading, setLoading } = useLoadingStore();
 
-  // Handle OTP input change
-  const handleOtpChange = (index, value) => {
-    if (!/^\d*$/.test(value)) return; // Allow only digits
-    const newOtp = [...otp];
-    newOtp[index] = value;
-    setOtp(newOtp);
+ // Handle OTP input change
+ const handleOtpChange = (index, value) => {
+  if (!/^\d*$/.test(value)) return; // Allow only digits
+  const newOtp = [...otp];
+  newOtp[index] = value;
+  setOtp(newOtp);
 
-    // Auto-focus next input
-    if (value && index < 5) {
-      otpRefs.current[index + 1].focus();
-    }
-  };
+  // Auto-focus next input if value is entered
+  if (value && index < 5) {
+    otpRefs.current[index + 1].focus();
+  }
+  // Auto-focus previous input if value is cleared
+  else if (!value && index > 0) {
+    otpRefs.current[index - 1].focus();
+  }
+};
 
-  // Handle backspace
-  const handleOtpKeyDown = (index, e) => {
-    if (e.key === "Backspace" && !otp[index] && index > 0) {
-      otpRefs.current[index - 1].focus();
-    }
-  };
+ // Handle key events for OTP (Backspace, Arrow keys)
+ const handleOtpKeyDown = (index, e) => {
+  if (e.key === "Backspace" && !otp[index] && index > 0) {
+    otpRefs.current[index - 1].focus();
+  } else if (e.key === "ArrowLeft" && index > 0) {
+    otpRefs.current[index - 1].focus();
+  } else if (e.key === "ArrowRight" && index < 5) {
+    otpRefs.current[index + 1].focus();
+  }
+};
 
-  // Check if all OTP boxes are filled
-  const isOtpComplete = otp.every((digit) => digit !== "");
+ // Check if all OTP boxes are filled
+ const isOtpComplete = otp.every((digit) => digit !== "");
 
   // Send OTP
   const handleSendOtp = async () => {
@@ -223,10 +231,10 @@ const SignUp = () => {
                                 </p>
                               </div>
                               {message && (
-                                <p className="text-primary text-center mt-3">{message}</p>
+                                <p className="alert alert-warning text-primary text-center mt-3">{message}</p>
                               )}
                               {error && (
-                                <p className="text-primary text-center mt-3">{error}</p>
+                                <p className="text-warnig alert alert-warning text-center mt-3">{error}</p>
                               )}
                               <Form onSubmit={handleSignUp} className="auth-form">
                                 <div className="mb-3">
@@ -244,7 +252,7 @@ const SignUp = () => {
                                   />
                                 </div>
                                 <div className="mb-3 position-relative">
-                                  <label htmlFor="emailInput" className="form-label">
+                                  <label htmlFor="emailInput  " className="form-label">
                                     Email
                                   </label>
                                   <div className="d-flex align-items-center">
